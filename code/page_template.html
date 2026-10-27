@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cholera 1849</title>
+<meta name="description" content="William Farr's 1849 cholera figures for London's 38 districts, John Snow's 1854 Broad Street map, and whether the worst-hit districts are still the poorest today.">
+<meta property="og:title" content="Cholera 1849: low ground, bad water and a long shadow">
+<meta property="og:description" content="{{farr.deaths|int}} cholera deaths in London in 1849. Was it the low ground or the water? And are the worst-hit districts still the poorest?">
+<meta property="og:image" content="https://tristan-hotham.github.io/cholera-1849/header.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Victorian plate: pale river-grey paper, ink, one sickly yellow-green. Blue = water supply. */
+:root{
+  --bg:#E7ECEC; --panel:#DCE3E4; --fg:#16191A; --muted:#5C6668; --rule:#C7D0D1; --card:#F3F6F5; --border:#B4BFC1;
+  --hot:#7F8C0B; --hotink:#5E6800; --blue:#2D5F80; --rust:#9A4A2A; --dot:#8A9597;
+  --c0:#F1F2DC; --c1:#DDE29F; --c2:#B9C24F; --c3:#8C981A; --c4:#56600E; --c5:#22260A;
+  --i0:#E3EEF3; --i1:#B5CFDD; --i2:#7FA8C2; --i3:#4A7EA0; --i4:#24506E;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121617; --panel:#1B2122; --fg:#E6EBEA; --muted:#9AA6A8; --rule:#2C3537; --card:#192021; --border:#3A4547;
+  --hot:#C3D23A; --hotink:#C9D64A; --blue:#79A9CB; --rust:#D98A66; --dot:#6E7B7D;
+  --c0:#2A2F1A; --c1:#4A5320; --c2:#76822A; --c3:#A3B232; --c4:#CBD95A; --c5:#EEF5A0;
+  --i0:#1E2B33; --i1:#2C4A5E; --i2:#3F6F8E; --i3:#6698BA; --i4:#A6CBE3; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121617; --panel:#1B2122; --fg:#E6EBEA; --muted:#9AA6A8; --rule:#2C3537; --card:#192021; --border:#3A4547;
+  --hot:#C3D23A; --hotink:#C9D64A; --blue:#79A9CB; --rust:#D98A66; --dot:#6E7B7D;
+  --c0:#2A2F1A; --c1:#4A5320; --c2:#76822A; --c3:#A3B232; --c4:#CBD95A; --c5:#EEF5A0;
+  --i0:#1E2B33; --i1:#2C4A5E; --i2:#3F6F8E; --i3:#6698BA; --i4:#A6CBE3; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1080px,calc(100vw - 32px));margin-left:calc((100% - min(1080px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--hot);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--fg);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(56px,14vw,118px)/.86 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance;font-variation-settings:"SOFT" 50}
+h1 em{font-style:normal;color:var(--hot)}
+.mark{width:clamp(92px,21vw,176px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:44ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--hotink);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--hot)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(28px,6vw,40px)/1 var(--display);color:var(--fg)}
+.stats b.h{color:var(--hotink)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:270px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+.tip b{font-weight:500}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible{outline:2px solid var(--hot);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:18px;align-items:start}
+@media (max-width:820px){.mapgrid{grid-template-columns:1fr}}
+.map{height:clamp(420px,70vh,620px);border:1px solid var(--border);background:var(--panel);border-radius:2px;z-index:0}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;font:400 12px/1.3 var(--mono);color:var(--muted);margin-top:8px;align-items:center}
+.legend i{display:inline-block;width:12px;height:12px;margin-right:5px;vertical-align:-2px;border:1px solid var(--border)}
+.legend i.c{border-radius:50%}
+.legend i.ln{width:18px;height:3px;border:0;vertical-align:3px}
+.side{display:flex;flex-direction:column;gap:12px}
+.card{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--hot);padding:12px 14px;font:400 13px/1.5 var(--mono)}
+.card.empty{border-left-color:var(--border);color:var(--muted)}
+.card b{font:600 18px/1.2 var(--display);display:block;margin-bottom:6px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:6px 0 4px}
+.card dt{color:var(--muted)}.card dd{margin:0}
+.toplist{list-style:none;margin:0;padding:0;font:400 12.5px/1.3 var(--mono);max-height:380px;overflow:auto;border:1px solid var(--rule);background:var(--card)}
+.toplist li{display:grid;grid-template-columns:24px minmax(0,1fr) auto;gap:8px;padding:7px 10px;border-bottom:1px solid var(--rule);cursor:pointer;align-items:center}
+.toplist li:hover,.toplist li:focus-visible{background:var(--panel);outline:none}
+.toplist .r{color:var(--muted)}.toplist .v{color:var(--hotink);font-weight:500}
+.toplist .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--hot);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0;vertical-align:bottom}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right}
+.tablewrap{overflow-x:auto;max-height:520px;overflow-y:auto}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--fg);border-color:var(--fg);color:var(--bg)}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1001}
+ul.facts{padding-left:20px}ul.facts li{margin-bottom:6px}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--panel)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--card);color:var(--fg);border-radius:3px;box-shadow:0 2px 10px rgba(0,0,0,.25)}
+.leaflet-popup-content{margin:10px 12px;font:400 12.5px/1.45 var(--mono)}
+.leaflet-popup-content b{font:600 15px/1.2 var(--display);display:block;margin-bottom:4px}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)!important;font-size:10px}
+.leaflet-control-attribution a{color:var(--fg)!important}
+.leaflet-bar a{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-bar a:hover{background:var(--panel)}
+.leaflet-bar{border:1px solid var(--border)!important}
+.leaflet-tooltip.plab{background:transparent;border:0;box-shadow:none;font:500 11px/1 var(--mono);color:var(--fg);padding:0;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg)}
+.leaflet-tooltip.plab::before{display:none}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Public health × history</span><span>London</span></div>
+<header class="hero">
+  <h1>Cholera <em>1849</em></h1>
+  <svg class="mark" viewBox="-100 -100 200 200" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">In 1849 cholera killed {{farr.deaths|int}} people in London's 38 registration districts. William Farr blamed the low ground. John Snow blamed the water. I rebuilt both arguments from their own figures, measured every death on Snow's Broad Street map, and asked whether the worst-hit districts are still the poorest today.</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · October 2026 · Data: Farr (1852) via HistData; Snow (1855) and Simon (1856) via SnowCholera; ONS small area income FYE2023</div>
+
+<div class="stats">
+  <div><b>{{farr.deaths|int}}</b><span>cholera deaths in Farr's 38 London districts, 1849</span></div>
+  <div><b class="h">{{farr.worst_to_best_ratio|int}}×</b><span>the death rate in Rotherhithe compared with Hampstead</span></div>
+  <div><b class="h">{{south.simon.ratio_1854|f1}}×</b><span>the 1854 death rate for Southwark and Vauxhall water against Lambeth water</span></div>
+  <div><b>{{long.chol_ahc.rho|f2}}</b><span>rank correlation between 1849 cholera and 2023 income: no link</span></div>
+</div>
+
+<p class="lede">Cholera reached England and Wales in 1848, and over the next two years about {{facts.england_wales_1848_49_deaths|int}} people there died of it. It killed unevenly. In Rotherhithe, on the low south bank of the Thames, {{farr.worst.0.rate|int}} people in every 10,000 died. In Hampstead, on its hill, it was {{farr.best.0.rate|int}}.</p>
+<p>William Farr, the statistician at the General Register Office, set out the figures district by district in his 1852 report and found a beautifully regular pattern: the higher the ground, the fewer the deaths. He read it as the work of bad air rising from the riverside soil. John Snow, a doctor, read the same years differently: cholera was something people swallowed, and the low districts were the ones drinking the Thames.</p>
+<p>This page puts their numbers side by side. Three questions run through it. Does Farr's elevation law hold up? Was it really about the water? And does the map of 1849 still show in the map of London's incomes today? Each death in these tables was a person; I have tried to keep that in view.</p>
+
+<h2><span class="n">01 · The map</span>London's cholera, district by district</h2>
+<p>Each shape is one of Farr's districts (a few small neighbours are merged), coloured by deaths per 10,000 people in 1849. Switch to today's income to see the same ground in 2023. The shapes are my approximation from named places, not historic boundaries: see the methods.</p>
+<div class="figure bleed">
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Map layer">
+      <button class="btn" data-lay="rate" aria-pressed="true">1849 cholera deaths</button>
+      <button class="btn" data-lay="inc" aria-pressed="false">2023 income</button>
+    </div>
+    <button class="btn" id="bwater" aria-pressed="false">Show 1849 water supply</button>
+  </div>
+  <div class="mapgrid">
+    <div>
+      <div class="map" id="map" role="application" aria-label="Map of London's 1849 registration districts coloured by cholera deaths"></div>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="side">
+      <div class="card empty" id="card">Tap a district to see its 1849 figures and its incomes today.</div>
+      <div class="fig-h" style="margin-top:4px">All 38 districts, worst first</div>
+      <ol class="toplist" id="toplist"></ol>
+    </div>
+  </div>
+  <div class="src">1849 figures: Farr (1852), as tabulated by Bingham, Verlander and Cheal (2004) in the HistData R package. Income: ONS small area income estimates, financial year ending 2023, net equivalised household income after housing costs, averaged over each area's 2021 MSOAs weighted by Census 2021 population.</div>
+</div>
+
+<h2><span class="n">02 · Farr's law</span>The higher the ground, the fewer the deaths</h2>
+<p>Farr's table gives each district's height above the Thames high-water mark. The pattern is as strong as he said. Across the 38 districts the rank correlation between height and the death rate is {{farr.elev_spearman|f2}}. The {{farr.n_below_20ft|int}} districts below 20 feet lost {{farr.bands.0.rate|f1}} people per 10,000; the two at 100 feet or more lost {{farr.bands.4.rate|f1}}, {{farr.band_ratio_low_high|f1}} times fewer.</p>
+<p>Farr fitted a law to it: a smooth curve on which mortality falls as the ground rises, from 174 per 10,000 at the river to 6 at 350 feet. A curve of the same shape fitted to his own districts explains {{farr.fit_r2|pct0}} of the variation in death rates, weighting each district by its population.</p>
+<div class="figure">
+  <div class="fig-h">Cholera deaths and height above the Thames, 1849</div>
+  <div class="fig-sub">Each dot is a district, sized by population and coloured by its water source. The line is Farr's own law. Height on a stretched scale so the low districts can be told apart.</div>
+  <div class="chart" id="elev"></div>
+  <div class="legend" id="elevleg"></div>
+</div>
+<div class="figure">
+  <div class="fig-h">Death rate by height band</div>
+  <div class="fig-sub">All districts in each band pooled: deaths per 10,000 people.</div>
+  <div class="chart" id="bands"></div>
+</div>
+
+<h2><span class="n">03 · The water</span>It was the water, mostly</h2>
+<p>The trouble with Farr's law is that height and water went together. Farr's own table sorts the districts into three water sources. The twelve districts drinking Thames water taken between Battersea and Waterloo Bridge, in central London, were all low: none stood higher than {{water.battersea_all_below_ft|int}} feet. They lost {{water.groups.0.rate|f1}} people per 10,000. Districts supplied from the Thames upstream at Kew and Hammersmith lost {{water.groups.2.rate|f1}}, {{water.ratio_battersea_kew|f1}} times fewer.</p>
+<div class="figure">
+  <div class="fig-h">Death rate by water source, 1849</div>
+  <div class="fig-sub">Deaths per 10,000 people, all districts on each source pooled, with the typical height of those districts.</div>
+  <div class="chart" id="water"></div>
+</div>
+<p>Farr's table on its own cannot pull the two apart. Height alone accounts for {{water.r2.elev|pct0}} of the variation in (logged) death rates across districts; water source alone for {{water.r2.water|pct0}}; the two together for {{water.r2.both|pct0}}. Height still matters once water is allowed for, but less: each doubling of height cut deaths by {{water.elev_fall_per_doubling_alone|pct0}} on its own and by {{water.elev_fall_per_doubling_with_water|pct0}} after water. Water sources were defined coarsely, and low districts were poorer and more crowded too, so this is a tangle, not a verdict.</p>
+<p>The verdict came from south London. There, two companies, the Southwark and Vauxhall and the Lambeth, served the same districts house by house, so that neighbours could drink different water. By 1854 the Lambeth company was drawing its water from further up the Thames, at Seething Wells, while the Southwark and Vauxhall still took it from a stretch fouled by London's sewage. The ground had not moved. The water had.</p>
+<div class="figure">
+  <div class="fig-h">Same streets, different water</div>
+  <div class="fig-sub">Cholera deaths per 1,000 people in houses supplied by each company (as supplied in 1854), in nine south London districts. John Simon's report of 1856, Table II.</div>
+  <div class="chart" id="simon"></div>
+</div>
+<p>In 1849 the two companies' customers died at the same rate, {{south.simon.lambeth_1849|f1}} per 1,000. In 1854 Southwark and Vauxhall customers died at {{south.simon.southwark_1854|f1}} per 1,000 and Lambeth customers at {{south.simon.lambeth_1854|f1}}: {{south.simon.ratio_1854|f1}} times fewer. Snow's own count for the first seven weeks of 1854 was starker still: {{south.table_ix.0.deaths_per_10000_houses|int}} deaths per 10,000 houses on Southwark and Vauxhall water, {{south.table_ix.1.deaths_per_10000_houses|int}} on Lambeth water.</p>
+<p class="pull">In 1849 both companies' customers died at the same rate. By 1854 one company had moved its intake upriver, and its customers' death rate had fallen by {{south.simon.lambeth_fall|pct0}}.</p>
+<div class="figure">
+  <div class="fig-h">From 1849 to 1854, by who supplied the water</div>
+  <div class="fig-sub">Change in cholera deaths between the two epidemics in Snow's 32 south London sub-districts, grouped by which company served them. Snow (1855), Table XII.</div>
+  <div class="chart" id="xii"></div>
+</div>
+
+<h2><span class="n">04 · Broad Street, 1854</span>Every death on Snow's map</h2>
+<p>Five years later, at the end of August 1854, cholera broke out around Broad Street in Soho. Snow marked each death as a small bar at its address. This map shows the {{broad.deaths_on_map|int}} deaths on his map, placed by the georeferenced copy in the cholera R package, and the {{broad.n_pumps|int}} public pumps.</p>
+<div class="figure bleed">
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Colour deaths by">
+      <button class="btn" data-snow="pump" aria-pressed="true">Nearest pump on foot</button>
+      <button class="btn" data-snow="dist" aria-pressed="false">Walk to Broad Street</button>
+    </div>
+    <button class="btn" id="brings" aria-pressed="true">100 m rings</button>
+    <button class="btn" id="bstack" aria-pressed="false">Stack as Snow drew them</button>
+  </div>
+  <div class="map" id="smap" role="application" aria-label="Map of deaths around the Broad Street pump in 1854"></div>
+  <div class="legend" id="sleg"></div>
+  <div class="src">Deaths, pumps and streets: Snow (1855) digitised by Rusty Dodson and Waldo Tobler (1992), georeferenced in the cholera R package by Peter Li (GPL). Walking distances run along the streets on Snow's map. Pump names as in HistData.</div>
+</div>
+<p>Half of the deaths were within {{broad.median_dist_m|int}} metres of the Broad Street pump as the crow flies, and {{broad.share_within_200m|pct0}} within 200 metres. Walking along the streets, {{broad.nearest_broad_walk|int}} of the {{broad.deaths_on_map|int}} deaths ({{broad.share_nearest_broad_walk|pct0}}) were at addresses closer to Broad Street than to any other pump. Within 100 metres of the pump the dead lay at {{broad.rings.0.per_ha|f1}} per hectare; between 200 and 300 metres, {{broad.rings.2.per_ha|f1}}.</p>
+<p>On my measure the other {{broad.nearer_other_pump_walk|int}} deaths were nearer, on foot, to another pump, many of them only just. Snow, who walked these streets himself, counted only {{facts.snow_decidedly_nearer_other_pump|int}} deaths in houses "decidedly nearer" another pump. Of those, {{facts.snow_families_preferred_broad|int}} families told him they always sent to Broad Street because they preferred its water, and {{facts.snow_children_school|int}} were children who went to school near it. The map cannot show that. It was the conversations that made the case.</p>
+<div class="figure">
+  <div class="fig-h">How far the dead lived from the Broad Street pump</div>
+  <div class="fig-sub">Deaths on Snow's map by straight-line distance from the pump, in 50 metre bands.</div>
+  <div class="chart" id="dist"></div>
+</div>
+<div class="figure">
+  <div class="fig-h">Fatal attacks by day, 1854</div>
+  <div class="fig-sub">Snow's table of fatal attacks by the day they began. The handle was taken off the pump on 8 September.</div>
+  <div class="chart" id="days"></div>
+</div>
+<p>The handle came off on 8 September, after Snow spoke to the parish guardians. By then the outbreak had already turned: {{broad.attacks_31aug_2sep|int}} fatal attacks began between 31 August and 2 September, and only {{broad.attacks_day_before_handle|int}} on 7 September. Many people had fled. Snow himself wrote that the attacks had fallen so far before the handle came off that it was impossible to decide whether the well was still dangerous. What it shows is how short and how local the disaster was.</p>
+
+<h2><span class="n">05 · The long shadow</span>Are the worst-hit districts still the poorest?</h2>
+<p>To compare 1849 with today I gave each of London's 2021 small areas (MSOAs) to the 1849 district whose named places lie nearest, on the same bank of the river. That gives {{long.n_units|int}} areas, covering {{long.n_msoas|int}} MSOAs and {{long.pop_2021|int}} people in 2021, each with its 1849 death rate and its average household income in 2023.</p>
+<div class="figure">
+  <div class="fig-h">1849 cholera against 2023 income</div>
+  <div class="fig-sub">Each dot is an 1849 district or group of districts, sized by its 2021 population. Income: net household income after housing costs, equivalised, FYE2023.</div>
+  <div class="chart" id="then"></div>
+</div>
+<p>There is no link. The rank correlation between the 1849 death rate and income after housing costs today is {{long.chol_ahc.rho|f2}}, which is nothing. The eight worst-hit areas of 1849 now average £{{long.worst8.income_ahc|int}} a year after housing costs; the eight least hit, £{{long.best8.income_ahc|int}}. Wandsworth, where {{long.examples.Wandsworth.rate_1849|f1}} in 10,000 died, now has the {{long.examples.Wandsworth.rank_income_ahc|ord}} highest income after housing costs of the {{long.n_units|int}} areas; Paddington, which lost {{long.examples.Paddington.rate_1849|f1}}, ranks {{long.examples.Paddington.rank_income_ahc|ord}}.</p>
+<p>But the 1849 map of wealth has left a faint mark. Farr also recorded the value of houses per person, a rough measure of how well off a district was. That does line up with income today: the rank correlation with total household income in 2023 is {{long.hv_total.rho|f2}} (p = {{long.hv_total.p|f2}} across {{long.n_units|int}} areas). Bethnal Green had the cheapest housing per head of all {{long.n_units|int}} areas in 1849 and has the {{long.examples.Bethnal Green.rank_income_ahc|ordrev}} income after housing costs now. Cholera has left London's map; the geography of who could afford what has not.</p>
+<div class="figure">
+  <div class="fig-h">1849 house value per person against 2023 income</div>
+  <div class="fig-sub">Annual value of houses per person in 1849 (pounds, log scale), against total annual household income in FYE2023.</div>
+  <div class="chart" id="hv"></div>
+</div>
+<div class="figure">
+  <div class="fig-h">Then and now, area by area</div>
+  <div class="fig-sub">Sorted by the 1849 death rate. Tap a heading to sort.</div>
+  <div class="tablewrap"><table class="t" id="tnow"></table></div>
+</div>
+
+<h2><span class="n">06 · Beyond London</span>The whole country, week by week</h2>
+<p>London was only part of it. Farr also printed the daily deaths from cholera for all of England and Wales in 1849: {{national.cholera_deaths_1849|int}} in the year. The worst day was {{national.peak_date|raw}}, with {{national.peak_deaths|int}} deaths; August and September alone held {{national.aug_sep_share|pct0}} of the year's total. I looked for an open digital copy of Farr's district table for the whole of England and Wales, so as to map the national picture, and did not find one, so this study stays in London.</p>
+<div class="figure">
+  <div class="fig-h">Cholera deaths in England and Wales, week by week, 1849</div>
+  <div class="fig-sub">Weekly totals of Farr's daily register counts (weeks ending Saturday).</div>
+  <div class="chart" id="nat"></div>
+</div>
+
+<h2><span class="n">07 · Method</span>How I did this, and what to watch for</h2>
+<ul class="facts">
+<li><b>Farr's districts.</b> Deaths, population, height, water source and housing figures for the 38 districts come from Farr's 1852 report as tabulated by Bingham, Verlander and Cheal (2004) and published in the HistData R package. Death rates are per 10,000 people living in the district in mid 1849. Their total, {{farr.deaths|int}}, is a little below the {{facts.london_1849_deaths_wikipedia|int}} often quoted for London in 1849.</li>
+<li><b>Height and water.</b> Regressions are on the log of each district's death rate, weighted by population, with height as log(feet + 3) because a few districts sit at or just below the high-water mark. Farr's three water groups are coarse: a district could be served by more than one company.</li>
+<li><b>South London.</b> The 1849 to 1854 comparison uses Snow's Table XII (deaths by sub-district) and Simon's Table II (deaths per 1,000 by company), both transcribed by Thomas Coleman. Simon's rates are his own, as printed.</li>
+<li><b>Broad Street.</b> Each death is placed at its address point (unstacked) from the cholera R package. Distances are straight lines and walks along the streets drawn on Snow's map; the map has no population figures, so densities are deaths per hectare, not rates.</li>
+<li><b>Then and now.</b> There is no open boundary file for the 1849 districts that I could use. I gave each district {{long.n_seeds|int}} named places in total from OS Open Names (listed in the data), gave each 2021 MSOA in the thirteen inner London boroughs to the nearest named place on the same bank, and dropped {{long.n_msoas_dropped|int}} MSOAs more than {{long.max_seed_km|int}} km from any. MSOAs are much coarser than 1849 districts in the West End and the City, so I merged three City districts, three Borough districts and four West End districts. Shapes on the map are my approximation. With {{long.n_units|int}} areas, only strong links would show.</li>
+<li><b>Income.</b> ONS model-based estimates for financial year ending 2023, averaged over MSOAs weighted by Census 2021 population. Today's residents are not the descendants of 1849's; a link between maps is about places, not families.</li>
+</ul>
+<div class="cta">
+  <a class="p" href="https://doi.org/10.5281/zenodo.23689968">Read the paper</a>
+  <a href="https://github.com/Tristan-Hotham/cholera-1849">Data and code</a>
+  <a href="https://blog.tristanhotham.com/2026/10/27/cholera-1849/">Blog post</a>
+  <a href="https://blog.tristanhotham.com/">More data studies</a>
+</div>
+<h3>Sources and licences</h3>
+<ul class="facts" style="font-size:16px">
+<li>Farr, W. (1852) <i>Report on the Mortality of Cholera in England, 1848-49</i>. Tables via Bingham, P., Verlander, N.Q. and Cheal, M.J. (2004), <i>Public Health</i> 118(6), and the <a href="https://github.com/friendly/HistData">HistData</a> R package by Michael Friendly and others (GPL). Daily deaths transcribed by James Riley.</li>
+<li>Snow, J. (1855) <i>On the Mode of Communication of Cholera</i>, 2nd edition, Tables IX and XII, and Simon, J. (1856) <i>Report on the Last Two Cholera-Epidemics of London</i>, Table II, transcribed by Thomas Coleman in <a href="https://github.com/tscoleman/SnowCholera">SnowCholera</a> (BSD 2-Clause).</li>
+<li>Snow's map: digitised by Rusty Dodson and Waldo Tobler (1992); georeferenced in the <a href="https://github.com/lindbrook/cholera">cholera</a> R package by Peter Li (GPL).</li>
+<li>Office for National Statistics: income estimates for small areas, FYE2023; Census 2021 population; MSOA population-weighted centroids. Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2026.</li>
+<li>OS Open Names and OS Open Rivers, Ordnance Survey, Open Government Licence v3.0. Contains OS data © Crown copyright and database right 2026.</li>
+<li>Historical background from English Wikipedia articles on John Snow, William Farr, the 1854 Broad Street cholera outbreak, the 1846 to 1860 cholera pandemic, the history of cholera and the Public Health Act 1848 (CC BY-SA 4.0).</li>
+</ul>
+
+<footer>
+  <p>Dr Tristan Hotham, researcher on social media, campaigns and politics. Independent researcher. ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a>.</p>
+  <p>Cite as: Hotham, T. (2026) Cholera 1849: low ground, bad water and a long shadow. <a href="https://doi.org/10.5281/zenodo.23689968">https://doi.org/10.5281/zenodo.23689968</a></p>
+  <p>Base map tiles © Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community. Map library: Leaflet. Page text CC BY 4.0. Code MIT. Data files keep the licences of their sources (see README).</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/*DATA*/
+const NS = "http://www.w3.org/2000/svg";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const el = (t, a = {}, p) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const fmt = n => Math.round(n).toLocaleString("en-GB");
+const pc = (x, d = 0) => (x * 100).toFixed(d) + "%";
+const tip = document.getElementById("tip");
+function showTip(h, x, y) { tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth; x = Math.max(w / 2 + 8, Math.min(innerWidth - w / 2 - 8, x)); tip.style.left = x + scrollX + "px"; tip.style.top = y + scrollY + "px"; }
+function hideTip() { tip.style.display = "none"; }
+function hover(node, h) { node.style.cursor = "pointer"; node.setAttribute("tabindex", "0"); const s = () => { const r = node.getBoundingClientRect(); showTip(h, r.left + r.width / 2, r.top); }; node.addEventListener("pointerenter", s); node.addEventListener("focus", s); node.addEventListener("pointerleave", hideTip); node.addEventListener("blur", hideTip); node.addEventListener("click", e => { e.stopPropagation(); s(); }); }
+document.addEventListener("click", hideTip);
+const redraws = [];
+function resp(box, render) { let last = 0; const go = (force) => { const w = Math.max(280, Math.round(box.clientWidth)); if (!force && Math.abs(w - last) < 4) return; last = w; box.innerHTML = ""; render(w, w < 560); }; new ResizeObserver(() => go()).observe(box); redraws.push(() => go(true)); go(); }
+const lbl = (svg, x, y, s, cls = "lab", anchor = "start") => { const t = el("text", { x, y, class: cls, "text-anchor": anchor }, svg); t.textContent = s; return t; };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const R = D.R;
+const isDark = () => { const r = document.documentElement; return r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+document.getElementById("theme").onclick = () => { const r = document.documentElement; r.dataset.theme = isDark() ? "light" : "dark"; redraws.forEach(f => f()); (window.__restyle || []).forEach(f => f()); };
+window.__restyle = [];
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { redraws.forEach(f => f()); window.__restyle.forEach(f => f()); });
+const WCOL = { "Battersea": "var(--rust)", "New River": "var(--blue)", "Kew": "var(--hot)" };
+const WLAB = { "Battersea": "Thames, Battersea to Waterloo", "New River": "New River, Lea, Ravensbourne", "Kew": "Thames at Kew, Hammersmith" };
+const RB = [20, 40, 70, 100, 150], RC = ["--c0", "--c1", "--c2", "--c3", "--c4", "--c5"];
+const IB = [37000, 41000, 45000, 49000], IC = ["--i0", "--i1", "--i2", "--i3", "--i4"];
+const binc = (v, b) => { let i = 0; while (i < b.length && v >= b[i]) i++; return i; };
+const C = {}; const col = v => C[v] || (C[v] = css(v)); window.__restyle.push(() => { for (const k in C) delete C[k]; });
+
+/* hero mark: a pump with a dripping spout */
+(() => { const g = document.getElementById("heroMark");
+  el("rect", { x: -26, y: -40, width: 52, height: 120, rx: 4, fill: "var(--fg)" }, g);
+  el("rect", { x: -34, y: -54, width: 68, height: 18, rx: 3, fill: "var(--fg)" }, g);
+  el("circle", { cx: 0, cy: -68, r: 12, fill: "var(--fg)" }, g);
+  el("path", { d: "M26 -20 L64 -20 L64 -8 L38 -8 L38 6 L26 6 Z", fill: "var(--fg)" }, g);
+  el("path", { d: "M-26 -10 L-74 -48", stroke: "var(--fg)", "stroke-width": 8, "stroke-linecap": "round" }, g);
+  el("path", { d: "M58 2 C58 2 50 16 50 22 a8 8 0 0 0 16 0 C66 16 58 2 58 2 Z", fill: "var(--hot)" }, g);
+  el("path", { d: "M58 40 C58 40 52 50 52 55 a6 6 0 0 0 12 0 C64 50 58 40 58 40 Z", fill: "var(--hot)", opacity: .6 }, g);
+  el("rect", { x: -44, y: 80, width: 88, height: 10, fill: "var(--fg)" }, g);
+})();
+
+/* ===== London map ===== */
+const UN = D.units.features;
+const unitOf = {}; UN.forEach(f => f.properties.farr_districts.split("; ").forEach(d => unitOf[d] = f));
+(() => {
+  const card = document.getElementById("card");
+  if (!window.L) { document.getElementById("map").innerHTML = '<p style="padding:16px;font:400 13px/1.5 var(--mono)">The map library did not load. The charts below still work.</p>'; return; }
+  let lay = "rate", water = false, sel = null;
+  const map = L.map("map", { scrollWheelZoom: false, zoomSnap: .25, minZoom: 9, maxZoom: 15 }).fitBounds([[51.425, -0.24], [51.575, 0.06]]);
+  map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+  map.on("focus", () => map.scrollWheelZoom.enable()); map.on("blur", () => map.scrollWheelZoom.disable());
+  const tileUrl = () => `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${isDark() ? "World_Dark_Gray_Base" : "World_Light_Gray_Base"}/MapServer/tile/{z}/{y}/{x}`;
+  const tiles = L.tileLayer(tileUrl(), { maxZoom: 16, attribution: "Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors, and the GIS user community · Farr 1852 via HistData · ONS FYE2023" }).addTo(map);
+  const thames = L.geoJSON(D.thames, { interactive: false, style: () => ({ color: col("--blue"), weight: 3, opacity: .55 }) }).addTo(map);
+  const dots = L.layerGroup();
+  const shapes = L.geoJSON(D.units, { style: f => style(f), onEachFeature: (f, l) => { l.on("click", e => { L.DomEvent.stopPropagation(e); select(f); }); l.bindTooltip(f.properties.unit, { sticky: true, direction: "top" }); } }).addTo(map);
+  function fillFor(p) { return lay === "rate" ? col(RC[binc(p.cholera_rate_1849, RB)]) : col(IC[binc(p.income_net_ahc_2023, IB)]); }
+  function style(f) { const p = f.properties, on = sel && sel === f;
+    const wcol = water ? { "Battersea": col("--rust"), "New River": col("--blue"), "Kew": col("--hot") }[p.water_1849.split("/")[0]] : null;
+    return { fillColor: fillFor(p), fillOpacity: lay === "inc" ? .2 : .82, color: on ? col("--fg") : (wcol || col("--bg")), weight: on ? 3 : (water ? 3 : .8), opacity: 1, dashArray: water && p.water_1849.includes("/") ? "4 3" : null }; }
+  function drawDots() { dots.clearLayers(); if (lay !== "inc") { map.removeLayer(dots); return; }
+    D.msoa.forEach(m => L.circleMarker([m[1], m[0]], { radius: 4.5, weight: .6, color: col("--bg"), fillColor: col(IC[binc(m[3], IB)]), fillOpacity: .95 }).bindTooltip(`${esc(m[4])}: £${fmt(m[3])}`).addTo(dots)); dots.addTo(map); }
+  function restyle() { shapes.setStyle(style); drawDots(); legend(); }
+  function legend() { const lg = document.getElementById("legend");
+    if (lay === "rate") { const labs = ["under 20", "20 to 39", "40 to 69", "70 to 99", "100 to 149", "150 or more"]; lg.innerHTML = `<span>Deaths per 10,000, 1849:</span>` + RC.map((c, i) => `<span><i style="background:var(${c})"></i>${labs[i]}</span>`).join(""); }
+    else { const labs = ["under £37k", "£37k to £41k", "£41k to £45k", "£45k to £49k", "£49k or more"]; lg.innerHTML = `<span>Income after housing costs, 2023 (dots: MSOAs):</span>` + IC.map((c, i) => `<span><i class="c" style="background:var(${c})"></i>${labs[i]}</span>`).join(""); }
+    if (water) lg.innerHTML += `<span style="flex-basis:100%"></span><span>Outline, 1849 water:</span>` + Object.keys(WLAB).map(k => `<span><i class="ln" style="background:${WCOL[k]}"></i>${WLAB[k]}</span>`).join("") + `<span>dashed: mixed</span>`;
+  }
+  function select(f) { sel = f; restyle(); if (!f) { card.className = "card empty"; card.textContent = "Tap a district to see its 1849 figures and its incomes today."; return; }
+    const p = f.properties, ds = p.farr_districts.split("; "), rows = D.districts.filter(d => ds.includes(d.district));
+    card.className = "card";
+    card.innerHTML = `<b>${esc(p.unit)}</b>` + (ds.length > 1 ? `<div style="color:var(--muted)">Merged: ${rows.map(r => `${esc(r.district)} (${r.cholera_drate})`).join(", ")}</div>` : "") +
+      `<dl><dt>Deaths, 1849</dt><dd>${fmt(p.cholera_deaths_1849)} of ${fmt(p.pop_1849)}</dd><dt>Per 10,000</dt><dd style="color:var(--hotink);font-weight:500">${p.cholera_rate_1849.toFixed(1)}</dd><dt>Height</dt><dd>${p.elevation_ft.toFixed(0)} ft above high water</dd><dt>Water</dt><dd>${p.water_1849.split("/").map(w => WLAB[w]).join("; ")}</dd><dt>House value</dt><dd>£${p.house_value_pp_1849.toFixed(2)} a year per person</dd>` +
+      `<dt>Today</dt><dd>${p.msoas_2021} MSOAs, ${fmt(p.pop_2021)} people</dd><dt>Income, 2023</dt><dd>£${fmt(p.income_net_ahc_2023)} after housing costs; £${fmt(p.income_total_2023)} total</dd></dl>`; }
+  map.on("click", () => select(null));
+  document.querySelectorAll("[data-lay]").forEach(b => b.onclick = () => { lay = b.dataset.lay; document.querySelectorAll("[data-lay]").forEach(x => x.setAttribute("aria-pressed", x === b)); restyle(); });
+  const bw = document.getElementById("bwater"); bw.onclick = () => { water = !water; bw.setAttribute("aria-pressed", water); restyle(); };
+  const tl = document.getElementById("toplist");
+  [...D.districts].sort((a, b) => b.cholera_drate - a.cholera_drate).forEach((d, i) => { const li = document.createElement("li"); li.tabIndex = 0;
+    li.innerHTML = `<span class="r">${i + 1}</span><span class="nm">${esc(d.district)}</span><span class="v">${d.cholera_drate}</span>`;
+    const go = () => { const f = unitOf[d.district]; map.flyToBounds(L.geoJSON(f).getBounds().pad(.4), { duration: reduce ? 0 : .7, maxZoom: 13 }); select(f); };
+    li.onclick = go; li.onkeydown = e => { if (e.key === "Enter") go(); }; tl.appendChild(li); });
+  window.__restyle.push(() => { tiles.setUrl(tileUrl()); thames.setStyle({ color: col("--blue") }); restyle(); });
+  legend();
+})();
+
+/* ===== Snow map ===== */
+(() => {
+  if (!window.L) { document.getElementById("smap").innerHTML = '<p style="padding:16px">The map library did not load.</p>'; return; }
+  let mode = "pump", rings = true, stack = false;
+  const P = D.pumps, bs = P.findIndex(p => p[0] === "Broad St");
+  const map = L.map("smap", { scrollWheelZoom: false, zoomSnap: .25, minZoom: 14, maxZoom: 19 }).setView([P[bs][3], P[bs][2]], 16.5);
+  map.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+  map.on("focus", () => map.scrollWheelZoom.enable()); map.on("blur", () => map.scrollWheelZoom.disable());
+  const tileUrl = () => `https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/${isDark() ? "World_Dark_Gray_Base" : "World_Light_Gray_Base"}/MapServer/tile/{z}/{y}/{x}`;
+  const tiles = L.tileLayer(tileUrl(), { maxZoom: 19, maxNativeZoom: 16, attribution: "Tiles &copy; Esri, HERE, Garmin, &copy; OpenStreetMap contributors, and the GIS user community · Snow 1855 via the cholera R package" }).addTo(map);
+  const streets = L.polyline(D.streets.map(s => s.map(([x, y]) => [y, x])), { color: col("--fg"), weight: 1.2, opacity: .55, interactive: false }).addTo(map);
+  const ringL = L.layerGroup().addTo(map), dl = L.layerGroup().addTo(map), pl = L.layerGroup().addTo(map);
+  const PCOL = { "Broad St": "--hot", "Crown Chapel": "--blue", "Briddle St": "--rust" };
+  const dcol = d => mode === "pump" ? col(PCOL[d[6]] || "--dot") : col(RC[Math.min(5, Math.max(0, 5 - Math.floor(d[5] / 100)))]);
+  function draw() { dl.clearLayers(); pl.clearLayers(); ringL.clearLayers();
+    if (rings) [100, 200, 300].forEach(r => { L.circle([P[bs][3], P[bs][2]], { radius: r, color: col("--fg"), weight: 1, dashArray: "3 4", fill: false, interactive: false }).addTo(ringL);
+      L.tooltip({ permanent: true, className: "plab", direction: "center", interactive: false }).setLatLng([P[bs][3] + r / 111320, P[bs][2]]).setContent(r + " m").addTo(ringL); });
+    D.deaths.forEach(d => L.circleMarker(stack ? [d[3], d[2]] : [d[1], d[0]], { radius: stack ? 2.6 : 3.4, weight: .5, color: col("--bg"), fillColor: dcol(d), fillOpacity: .9 })
+      .bindTooltip(`${d[4]} m from Broad St pump; ${d[5]} m on foot<br>Nearest pump on foot: ${esc(d[6])}`).addTo(dl));
+    P.forEach((p, i) => { const b = i === bs; L.circleMarker([p[3], p[2]], { radius: b ? 9 : 6, weight: 2.5, color: col("--fg"), fillColor: b ? col("--hot") : col("--card"), fillOpacity: 1 })
+      .bindTooltip(`<b>${esc(p[0])} pump</b><br>today: ${esc(p[1])}`).addTo(pl); });
+    const lg = document.getElementById("sleg");
+    lg.innerHTML = (mode === "pump" ? [["--hot", "Nearest pump on foot: Broad St"], ["--blue", "Crown Chapel"], ["--rust", "Briddle St"], ["--dot", "Another pump"]].map(([c, t]) => `<span><i class="c" style="background:var(${c})"></i>${t}</span>`).join("")
+      : ["under 100 m", "100 to 199 m", "200 to 299 m", "300 to 399 m", "400 m or more"].map((t, i) => `<span><i class="c" style="background:var(${RC[5 - i]})"></i>${t}</span>`).join("") + "<span>walk to Broad St</span>")
+      + `<span><i class="c" style="background:var(--card);border:2px solid var(--fg)"></i>Pump</span>`; }
+  document.querySelectorAll("[data-snow]").forEach(b => b.onclick = () => { mode = b.dataset.snow; document.querySelectorAll("[data-snow]").forEach(x => x.setAttribute("aria-pressed", x === b)); draw(); });
+  const br = document.getElementById("brings"); br.onclick = () => { rings = !rings; br.setAttribute("aria-pressed", rings); draw(); };
+  const bst = document.getElementById("bstack"); bst.onclick = () => { stack = !stack; bst.setAttribute("aria-pressed", stack); draw(); };
+  window.__restyle.push(() => { tiles.setUrl(tileUrl()); streets.setStyle({ color: col("--fg") }); draw(); });
+  draw();
+})();
+
+/* ===== elevation scatter ===== */
+const ex = e => Math.log(e + 3);
+resp(document.getElementById("elev"), (W, nar) => {
+  const H = nar ? 300 : 360, m = { l: 46, r: 14, t: 12, b: 44 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Cholera death rate against height above the Thames for 38 districts" }, document.getElementById("elev"));
+  const X = e => m.l + (ex(e) - ex(-2)) / (ex(360) - ex(-2)) * (W - m.l - m.r), Y = v => H - m.b - v / 220 * (H - m.t - m.b);
+  for (let t = 0; t <= 200; t += 50) { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, t, "lab m s", "end"); }
+  [0, 10, 25, 50, 100, 200, 350].forEach(t => { el("line", { x1: X(t), x2: X(t), y1: H - m.b, y2: H - m.b + 4, stroke: "var(--muted)" }, svg); lbl(svg, X(t), H - m.b + 16, t, "lab m s", "middle"); });
+  lbl(svg, (W + m.l) / 2, H - 6, "Height above Thames high water (feet)", "lab m s", "middle");
+  lbl(svg, m.l + 4, m.t + 4, "Deaths per 10,000", "lab m s");
+  const fl = R.farr.farr_law_series; el("path", { d: "M" + fl.elevation.map((e, i) => `${X(e)} ${Y(fl.mortality[i])}`).join("L"), fill: "none", stroke: "var(--fg)", "stroke-width": 1.8, "stroke-dasharray": "5 4" }, svg);
+  lbl(svg, X(8), Y(118), "Farr's law", "lab s b");
+  [...D.districts].sort((a, b) => b.popn - a.popn).forEach(d => { const c = el("circle", { cx: X(d.elevation), cy: Y(d.cholera_drate), r: 3 + Math.sqrt(d.popn / 160000) * 7, fill: WCOL[d.water], "fill-opacity": .78, stroke: "var(--bg)", "stroke-width": 1 }, svg);
+    hover(c, `<b>${esc(d.district)}</b><br>${d.elevation} ft · ${d.cholera_drate} per 10,000<br>${fmt(d.cholera_deaths)} deaths of ${fmt(d.popn)}<br>Water: ${WLAB[d.water]}`); });
+  [["Rotherhithe", 6, -6], ["Hampstead", -8, -10], ["Wandsworth", 8, 4], ["Bethnal Green", 8, 4]].forEach(([n, dx, dy]) => { const d = D.districts.find(x => x.district === n); lbl(svg, X(d.elevation) + dx, Y(d.cholera_drate) + dy, n, "lab s", dx < 0 ? "end" : "start"); });
+});
+document.getElementById("elevleg").innerHTML = Object.keys(WLAB).map(k => `<span><i class="c" style="background:${WCOL[k]}"></i>${WLAB[k]}</span>`).join("") + `<span><i class="ln" style="background:var(--fg)"></i>Farr's law (dashed)</span>`;
+
+/* bars helper */
+function hbars(id, rows, opt) { resp(document.getElementById(id), (W, nar) => {
+  const rowH = opt.rowH || 34, lw = nar ? (opt.lwn || 120) : (opt.lw || 200), m = { l: lw, r: 104, t: 4, b: 22 }, H = rows.length * rowH + m.t + m.b;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": opt.aria }, document.getElementById(id));
+  const max = opt.max || Math.max(...rows.map(r => r.v)), Xs = v => m.l + v / max * (W - m.l - m.r);
+  rows.forEach((r, i) => { const y = m.t + i * rowH; const t = lbl(svg, m.l - 10, y + rowH / 2 + 4, nar && r.short ? r.short : r.label, "lab", "end");
+    const b = el("rect", { x: m.l, y: y + 5, width: Math.max(1.5, Xs(r.v) - m.l), height: rowH - 10, fill: r.c || "var(--hot)" }, svg); if (r.tip) hover(b, r.tip);
+    lbl(svg, Xs(r.v) + 6, y + rowH / 2 + 4, r.txt, "lab b s"); });
+  if (opt.axis) lbl(svg, m.l, H - 4, opt.axis, "lab m s");
+}); }
+hbars("bands", R.farr.bands.map(b => ({ label: b.label, v: b.rate, txt: b.rate.toFixed(1), c: "var(--c3)", tip: `<b>${b.label}</b><br>${b.n} districts, ${fmt(b.deaths)} deaths of ${fmt(b.population)}` })), { aria: "Death rate by height band", axis: "Deaths per 10,000 people, 1849", lw: 140, lwn: 120 });
+hbars("water", R.water.groups.map(g => ({ label: g.label, short: g.key === "Battersea" ? "Thames, central" : g.key === "Kew" ? "Thames, Kew" : "New River etc.", v: g.rate, txt: `${g.rate.toFixed(1)} · ${g.elev_median} ft`, c: WCOL[g.key], tip: `<b>${g.label}</b><br>${g.n} districts, ${fmt(g.deaths)} deaths of ${fmt(g.population)}<br>Median height ${g.elev_median} ft` })), { aria: "Death rate by water source", axis: "Deaths per 10,000 · median height of the districts", lw: 270, lwn: 120 });
+
+/* Simon slope chart */
+resp(document.getElementById("simon"), (W, nar) => {
+  const s = R.south.simon, H = 280, m = { l: nar ? 40 : 60, r: nar ? 150 : 230, t: 24, b: 30 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Cholera deaths per 1,000 by water company, 1849 and 1854" }, document.getElementById("simon"));
+  const x0 = m.l + 20, x1 = W - m.r, Y = v => H - m.b - v / 15 * (H - m.t - m.b);
+  [0, 5, 10, 15].forEach(t => { el("line", { x1: m.l, x2: W - m.r + 10, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, t, "lab m s", "end"); });
+  lbl(svg, x0, H - 8, "1848 to 1849", "lab b", "middle"); lbl(svg, x1, H - 8, "1853 to 1854", "lab b", "middle");
+  [["Southwark and Vauxhall", s.southwark_1849, s.southwark_1854, "var(--rust)", 0], ["Lambeth", s.lambeth_1849, s.lambeth_1854, "var(--blue)", 1]].forEach(([n, a, b, c, k]) => {
+    el("line", { x1: x0, y1: Y(a) + (k ? 5 : -5), x2: x1, y2: Y(b), stroke: c, "stroke-width": 4 }, svg);
+    const c1 = el("circle", { cx: x0, cy: Y(a) + (k ? 5 : -5), r: 7, fill: c }, svg), c2 = el("circle", { cx: x1, cy: Y(b), r: 7, fill: c }, svg);
+    hover(c1, `<b>${n}, 1848 to 1849</b><br>${a.toFixed(1)} deaths per 1,000`); hover(c2, `<b>${n}, 1853 to 1854</b><br>${b.toFixed(1)} deaths per 1,000`);
+    lbl(svg, x1 + 14, Y(b) + 4, `${b.toFixed(1)} ${nar ? (k ? "Lambeth" : "S and V") : n}`, "lab b"); });
+  lbl(svg, x0 - 12, Y(s.lambeth_1849) + 4, s.lambeth_1849.toFixed(1), "lab b", "end");
+  lbl(svg, m.l - 30, m.t - 10, "Deaths per 1,000", "lab m s");
+});
+
+/* Table XII change */
+hbars("xii", R.south.groups.map(g => ({ label: `${g.label} (${g.n_subdistricts})`, short: g.label.replace(" and Vauxhall", "/V").replace("companies", "cos"), v: Math.abs(g.change), txt: `${g.change > 0 ? "+" : "−"}${Math.abs(g.change * 100).toFixed(0)}%`, c: g.key === "Lambeth" ? "var(--blue)" : g.key === "SouthwarkVauxhall" ? "var(--rust)" : "var(--dot)", tip: `<b>${g.label}</b><br>${fmt(g.deaths_1849)} deaths in 1849, ${fmt(g.deaths_1854)} in 1854` })), { aria: "Change in deaths from 1849 to 1854 by water company", axis: "Size of the change in deaths, 1849 to 1854 (sign shown)", lw: 260, lwn: 130, max: 1 });
+
+/* distance histogram */
+resp(document.getElementById("dist"), (W, nar) => {
+  const h = R.broad.dist_hist.slice(0, 9), H = nar ? 220 : 240, m = { l: 40, r: 8, t: 14, b: 42 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Deaths by distance from the Broad Street pump" }, document.getElementById("dist"));
+  const max = 175, bw = (W - m.l - m.r) / h.length, Y = v => H - m.b - v / max * (H - m.t - m.b);
+  for (let t = 0; t <= 150; t += 50) { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, t, "lab m s", "end"); }
+  h.forEach((v, i) => { const x = m.l + i * bw + bw * .08, w = bw * .84; const r = el("rect", { x, y: Y(v), width: w, height: Y(0) - Y(v), fill: i < 4 ? "var(--c4)" : "var(--c2)" }, svg);
+    hover(r, `<b>${i * 50} to ${i * 50 + 49} m</b><br>${v} deaths`); lbl(svg, x + w / 2, Y(v) - 4, v, "lab s", "middle"); lbl(svg, m.l + i * bw, H - m.b + 15, i * 50, "lab m s", "middle"); });
+  lbl(svg, (W + m.l) / 2, H - 6, "Metres from the Broad Street pump (straight line)", "lab m s", "middle");
+});
+
+/* daily attacks */
+resp(document.getElementById("days"), (W, nar) => {
+  const s = R.broad.series, H = nar ? 230 : 250, m = { l: 40, r: 10, t: 14, b: 40 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Fatal attacks by day around Broad Street, 1854" }, document.getElementById("days"));
+  const bw = (W - m.l - m.r) / s.length, Y = v => H - m.b - v / 150 * (H - m.t - m.b), hi = s.findIndex(x => x[0] === "1854-09-08");
+  [0, 50, 100, 150].forEach(t => { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, t, "lab m s", "end"); });
+  s.forEach((d, i) => { const r = el("rect", { x: m.l + i * bw + .5, y: Y(d[1]), width: Math.max(1, bw - 1), height: Y(0) - Y(d[1]), fill: i < hi ? "var(--fg)" : "var(--dot)" }, svg);
+    const dt = new Date(d[0] + "T12:00:00"); hover(r, `<b>${dt.getDate()} ${dt.toLocaleString("en-GB", { month: "long" })}</b><br>${d[1]} fatal attacks began, ${d[2]} deaths`);
+    if (i % 7 === 3) lbl(svg, m.l + i * bw + bw / 2, H - m.b + 15, `${dt.getDate()} ${dt.toLocaleString("en-GB", { month: "short" })}`, "lab m s", "middle"); });
+  const xh = m.l + hi * bw; el("line", { x1: xh, x2: xh, y1: m.t, y2: H - m.b, stroke: "var(--hot)", "stroke-width": 2 }, svg); lbl(svg, xh + 6, m.t + 26, "Handle removed, 8 Sept", "lab s b");
+  lbl(svg, (W + m.l) / 2, H - 4, "Day the fatal attack began, 1854", "lab m s", "middle");
+});
+
+/* then and now scatter */
+function scatter(id, xk, xlab, logx, xf) { resp(document.getElementById(id), (W, nar) => {
+  const U = UN.map(f => f.properties), H = nar ? 300 : 340, m = { l: 56, r: 14, t: 12, b: 44 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": xlab + " against 2023 income" }, document.getElementById(id));
+  const yk = id === "hv" ? "income_total_2023" : "income_net_ahc_2023", ys = U.map(u => u[yk]), y0 = Math.floor(Math.min(...ys) / 5000) * 5000, y1 = Math.ceil(Math.max(...ys) / 5000) * 5000;
+  const xs = U.map(u => logx ? Math.log(u[xk]) : u[xk]), x0 = logx ? Math.log(1) : 0, x1 = logx ? Math.log(14) : 220;
+  const X = v => m.l + ((logx ? Math.log(v) : v) - x0) / (x1 - x0) * (W - m.l - m.r), Y = v => H - m.b - (v - y0) / (y1 - y0) * (H - m.t - m.b);
+  for (let t = y0; t <= y1; t += 5000) { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, "£" + t / 1000 + "k", "lab m s", "end"); }
+  (logx ? [1, 2, 4, 8, 12] : [0, 50, 100, 150, 200]).forEach(t => lbl(svg, X(t), H - m.b + 16, logx ? "£" + t : t, "lab m s", "middle"));
+  lbl(svg, (W + m.l) / 2, H - 6, xlab, "lab m s", "middle");
+  U.sort((a, b) => b.pop_2021 - a.pop_2021).forEach(u => { const c = el("circle", { cx: X(u[xk]), cy: Y(u[yk]), r: 3 + Math.sqrt(u.pop_2021 / 400000) * 12, fill: u.bank === "S" ? "var(--rust)" : "var(--blue)", "fill-opacity": .7, stroke: "var(--bg)", "stroke-width": 1 }, svg);
+    hover(c, `<b>${esc(u.unit)}</b><br>1849: ${u.cholera_rate_1849.toFixed(1)} deaths per 10,000; house value £${u.house_value_pp_1849.toFixed(2)} per person<br>2023: £${fmt(u[yk])} ${yk === "income_total_2023" ? "total" : "after housing costs"}<br>${fmt(u.pop_2021)} people in 2021`); });
+  const lab = id === "hv" ? ["Bethnal Green", "Hampstead", "City of London", "Wandsworth"] : ["Rotherhithe", "Wandsworth", "Stepney", "Hampstead", "Chelsea"];
+  lab.forEach(n => { const u = U.find(x => x.unit === n); if (!u) return; const left = X(u[xk]) > W - 140; lbl(svg, X(u[xk]) + (left ? -8 : 8), Y(u[yk]) - 8, n, "lab s", left ? "end" : "start"); });
+  const lx = id === "hv" ? m.l + 12 : W - m.r - (nar ? 150 : 210), ly = id === "hv" ? m.t + 6 : H - m.b - 40;
+  el("circle", { cx: lx, cy: ly, r: 5, fill: "var(--blue)" }, svg); lbl(svg, lx + 10, ly + 4, "North of the Thames", "lab s");
+  el("circle", { cx: lx, cy: ly + 18, r: 5, fill: "var(--rust)" }, svg); lbl(svg, lx + 10, ly + 22, "South of the Thames", "lab s");
+}); }
+scatter("then", "cholera_rate_1849", "Cholera deaths per 10,000, 1849", false);
+scatter("hv", "house_value_pp_1849", "House value per person, 1849 (pounds a year)", true);
+
+/* then and now table */
+(() => { const t = document.getElementById("tnow"); const U = UN.map(f => f.properties); let key = "cholera_rate_1849", dir = -1;
+  const cols = [["unit", "Area (1849 districts)"], ["cholera_rate_1849", "Deaths per 10,000, 1849", 1], ["house_value_pp_1849", "House value per head, 1849 (£)", 2], ["income_net_ahc_2023", "Income after housing, 2023 (£)", 0], ["msoas_2021", "MSOAs", 0]];
+  function draw() { const rows = [...U].sort((a, b) => (a[key] > b[key] ? 1 : -1) * dir);
+    t.innerHTML = `<thead><tr>${cols.map(([k, h, d]) => `<th class="${d !== undefined ? "num" : ""}" data-k="${k}" style="cursor:pointer">${h}${k === key ? (dir < 0 ? " ▾" : " ▴") : ""}</th>`).join("")}</tr></thead><tbody>` +
+      rows.map(u => `<tr>${cols.map(([k, h, d]) => `<td class="${d !== undefined ? "num" : ""}">${d === undefined ? esc(u[k]) : d ? u[k].toFixed(d) : fmt(u[k])}</td>`).join("")}</tr>`).join("") + "</tbody>";
+    t.querySelectorAll("th").forEach(th => th.onclick = () => { const k = th.dataset.k; dir = k === key ? -dir : -1; key = k; draw(); }); }
+  draw(); })();
+
+/* national weekly */
+resp(document.getElementById("nat"), (W, nar) => {
+  const s = R.national.weekly, H = nar ? 220 : 240, m = { l: 46, r: 10, t: 14, b: 36 }, svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Weekly cholera deaths in England and Wales, 1849" }, document.getElementById("nat"));
+  const max = Math.ceil(Math.max(...s.map(x => x[1])) / 1000) * 1000, X = i => m.l + i / (s.length - 1) * (W - m.l - m.r), Y = v => H - m.b - v / max * (H - m.t - m.b);
+  for (let t = 0; t <= max; t += 1000) { el("line", { x1: m.l, x2: W - m.r, y1: Y(t), y2: Y(t), stroke: "var(--rule)" }, svg); lbl(svg, m.l - 6, Y(t) + 4, fmt(t), "lab m s", "end"); }
+  el("path", { d: `M${X(0)} ${Y(0)}` + s.map((x, i) => `L${X(i)} ${Y(x[1])}`).join("") + `L${X(s.length - 1)} ${Y(0)}Z`, fill: "var(--c2)", "fill-opacity": .6, stroke: "var(--c4)", "stroke-width": 2 }, svg);
+  s.forEach((x, i) => { const d = new Date(x[0] + "T12:00:00"); if (d.getDate() <= 7) lbl(svg, X(i), H - m.b + 15, d.toLocaleString("en-GB", { month: "short" }), "lab m s", "middle");
+    const r = el("rect", { x: X(i) - (W - m.l - m.r) / s.length / 2, y: m.t, width: (W - m.l - m.r) / s.length, height: H - m.t - m.b, fill: "transparent" }, svg); hover(r, `<b>Week ending ${d.getDate()} ${d.toLocaleString("en-GB", { month: "long" })}</b><br>${fmt(x[1])} cholera deaths`); });
+});
+</script>
+</body>
+</html>
