@@ -1,0 +1,32 @@
+unit,farr_districts,bank,region_1849,water_1849,pop_1849,cholera_deaths_1849,cholera_rate_1849,elevation_ft,house_value_pp_1849,poor_rate_1849,persons_per_house_1849,msoas_2021,pop_2021,income_total_2023,income_net_ahc_2023,seeds
+City of London,London City; West London; East London,N,Central,New River,128140,688,53.7,37.1,10.919,0.0621,8.15,1,8583,91506,50879,City of London
+"Borough (St Saviour, St Olave, St George)",St Saviour; St Olave; St George Southwark,S,Kent,Battersea,100005,1622,162.2,1.1,3.731,0.0935,7.78,3,27057,75511,45849,Southwark
+Westminster,Westminster,N,West,Battersea,64109,437,68.2,2.0,3.715,0.039,9.96,1,8085,80742,50055,City of Westminster
+"West End (St James, Mayfair, Strand, St Martin)",St James Westminster; Hanover Square & Mayfair; Strand; St Martin-in-the-Fields,N,Central/West,Kew/New River,138433,330,23.8,45.3,12.32,0.0285,9.75,1,6388,81840,50982,Strand; Soho; St James's; Mayfair
+Belgrave,Belgrave,N,West,Battersea,37918,105,27.7,19.0,7.053,0.018,10.02,5,39457,78952,47124,Belgravia; Pimlico
+St Giles,St Giles,N,Central,New River,54062,285,52.7,68.0,5.668,0.052,10.9,3,22886,67387,35405,St Giles; Bloomsbury
+Holborn,Holborn,N,Central,New River,46134,161,34.9,53.0,5.678,0.034,10.02,1,6659,71935,34776,Holborn
+Clerkenwell,Clerkenwell,N,Central,New River,63499,121,19.1,63.0,3.706,0.057,9.14,2,19146,74896,41816,Clerkenwell
+St Luke,St Luke,N,Central,New River,53234,183,34.4,48.0,3.499,0.081,8.34,1,10673,63642,38459,St Luke's
+Marylebone,Marylebone,N,North,Kew,153960,261,17.0,100.0,6.824,0.043,10.87,8,63701,74587,45559,Marylebone; St John's Wood
+Paddington,Paddington,N,West,Kew,41267,35,8.5,76.0,5.725,0.039,11.86,10,92649,67346,38735,Paddington; Bayswater; Maida Vale
+Hampstead,Hampstead,N,North,Kew,11572,9,7.8,350.0,5.076,0.045,8.2,7,55845,88210,50612,Hampstead
+St Pancras,St Pancras,N,North,New River,160122,360,22.5,80.0,3.959,0.042,10.84,15,116859,73761,40268,St Pancras; Camden Town; Kentish Town; Somers Town; Gospel Oak
+Islington,Islington,N,North,New River,86761,187,21.6,88.0,3.542,0.03,10.2,19,179400,73540,43215,Islington; Highbury; Lower Holloway; Upper Holloway
+Hackney,Hackney,N,North,New River,55152,139,25.2,55.0,3.38,0.074,7.67,23,199322,70180,36718,Hackney; Homerton; Stoke Newington; Upper Clapton; Lower Clapton
+Shoreditch,Shoreditch,N,South,New River,104122,789,75.8,48.0,2.493,0.082,8.24,8,65009,69361,40676,Shoreditch; Hoxton; Haggerston
+Bethnal Green,Bethnal Green,N,South,New River,87263,789,90.4,36.0,1.26,0.136,7.41,5,36298,65843,32579,Bethnal Green
+Whitechapel,Whitechapel,N,South,New River,78590,506,64.4,28.0,3.1,0.075,8.9,3,31347,71728,35785,Whitechapel; Spitalfields
+St George in the East,St George East,N,South,New River,47334,199,42.0,15.0,4.161,0.08,7.91,4,30454,78616,37934,Wapping; Shadwell
+Stepney,Stepney,N,South,New River,106988,501,46.8,16.0,2.822,0.066,7.45,6,59607,68125,32483,Stepney; Limehouse; Mile End
+Poplar,Poplar,N,South,New River,44103,313,71.0,10.0,5.209,0.06,8.71,15,146670,74611,36605,Poplar; Bow; Bromley
+"Kensington (with Hammersmith, Brompton and Fulham)","Hammersmith, Brompton, Kensington and Fulham",N,West,Kew,68425,225,32.9,12.0,3.682,0.039,9.14,43,310884,76451,46824,Kensington; Brompton; Hammersmith; Fulham; Notting Hill
+Chelsea,Chelsea,N,West,Battersea,53379,247,46.3,12.0,3.179,0.067,9.45,4,25599,78907,54021,Chelsea
+Greenwich,Greenwich,S,Kent,New River,95954,718,74.8,8.0,2.861,0.081,8.0,15,130811,75787,43377,Greenwich; Deptford
+Lewisham,Lewisham,S,Kent,New River,32299,96,29.7,28.0,3.448,0.049,8.14,44,341597,73240,41124,Lewisham; Lee; Eltham; Lower Sydenham
+Wandsworth,Wandsworth,S,Kent,Battersea,48446,484,99.9,22.0,3.992,0.072,7.5,49,424724,83097,52582,Wandsworth; Battersea; Putney; Clapham; Upper Tooting; Streatham
+Lambeth,Lambeth,S,Kent,Battersea,134768,1618,120.1,3.0,3.787,0.072,7.58,24,220633,75058,44325,Lambeth; Kennington; Vauxhall; Brixton; Stockwell; West Norwood
+Camberwell,Camberwell,S,Kent,Battersea,51704,504,97.5,4.0,3.489,0.038,7.56,17,156794,72307,42893,Camberwell; Peckham; Dulwich
+Newington,Newington,S,Kent,Battersea,63074,907,143.8,-2.0,3.289,0.075,6.73,5,43798,63192,36412,Newington; Walworth
+Bermondsey,Bermondsey,S,Kent,Battersea,50900,836,164.2,0.0,3.049,0.089,7.64,6,52851,71589,43763,Bermondsey
+Rotherhithe,Rotherhithe,S,Kent,Battersea,17208,352,204.6,0.0,3.433,0.143,7.11,5,48170,78551,41577,Rotherhithe

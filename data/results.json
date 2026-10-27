@@ -1,0 +1,1083 @@
+{
+ "farr": {
+  "n_districts": 38,
+  "deaths": 14007,
+  "population": 2278925,
+  "rate_per_10000": 61.5,
+  "worst": [
+   {
+    "district": "Rotherhithe",
+    "rate": 205,
+    "deaths": 352,
+    "elevation": 0,
+    "water": "Battersea"
+   },
+   {
+    "district": "St Olave",
+    "rate": 181,
+    "deaths": 349,
+    "elevation": 2,
+    "water": "Battersea"
+   },
+   {
+    "district": "Bermondsey",
+    "rate": 164,
+    "deaths": 836,
+    "elevation": 0,
+    "water": "Battersea"
+   },
+   {
+    "district": "St George Southwark",
+    "rate": 161,
+    "deaths": 734,
+    "elevation": 0,
+    "water": "Battersea"
+   },
+   {
+    "district": "St Saviour",
+    "rate": 153,
+    "deaths": 539,
+    "elevation": 2,
+    "water": "Battersea"
+   },
+   {
+    "district": "Newington",
+    "rate": 144,
+    "deaths": 907,
+    "elevation": -2,
+    "water": "Battersea"
+   }
+  ],
+  "best": [
+   {
+    "district": "Hampstead",
+    "rate": 8,
+    "deaths": 9,
+    "elevation": 350,
+    "water": "Kew"
+   },
+   {
+    "district": "Hanover Square & Mayfair",
+    "rate": 8,
+    "deaths": 26,
+    "elevation": 49,
+    "water": "Kew"
+   },
+   {
+    "district": "Paddington",
+    "rate": 8,
+    "deaths": 35,
+    "elevation": 76,
+    "water": "Kew"
+   },
+   {
+    "district": "St James Westminster",
+    "rate": 16,
+    "deaths": 57,
+    "elevation": 43,
+    "water": "Kew"
+   },
+   {
+    "district": "Marylebone",
+    "rate": 17,
+    "deaths": 261,
+    "elevation": 100,
+    "water": "Kew"
+   },
+   {
+    "district": "Clerkenwell",
+    "rate": 19,
+    "deaths": 121,
+    "elevation": 63,
+    "water": "New River"
+   }
+  ],
+  "worst_to_best_ratio": 26.0,
+  "elev_spearman": -0.81,
+  "elev_spearman_p": 1e-09,
+  "elev_min": -2,
+  "elev_max": 350,
+  "n_below_20ft": 16,
+  "bands": [
+   {
+    "label": "Below 20 ft",
+    "n": 16,
+    "deaths": 8584,
+    "population": 935869,
+    "rate": 91.7
+   },
+   {
+    "label": "20 to 39 ft",
+    "n": 7,
+    "deaths": 2457,
+    "population": 355800,
+    "rate": 69.1
+   },
+   {
+    "label": "40 to 59 ft",
+    "n": 8,
+    "deaths": 1708,
+    "population": 416013,
+    "rate": 41.1
+   },
+   {
+    "label": "60 to 99 ft",
+    "n": 5,
+    "deaths": 988,
+    "population": 405711,
+    "rate": 24.4
+   },
+   {
+    "label": "100 ft and above",
+    "n": 2,
+    "deaths": 270,
+    "population": 165532,
+    "rate": 16.3
+   }
+  ],
+  "band_ratio_low_high": 5.6,
+  "farr_law_series": {
+   "elevation": [
+    0,
+    10,
+    30,
+    50,
+    70,
+    90,
+    100,
+    350
+   ],
+   "mortality": [
+    174,
+    99,
+    53,
+    34,
+    27,
+    22,
+    20,
+    6
+   ]
+  },
+  "fit_a": 2057.0,
+  "fit_b": 15.1,
+  "fit_r2": 0.68
+ },
+ "water": {
+  "groups": [
+   {
+    "key": "Battersea",
+    "label": "Thames, Battersea to Waterloo Bridge",
+    "n": 12,
+    "deaths": 7112,
+    "population": 621511,
+    "rate": 114.4,
+    "elev_median": 2.0,
+    "elev_max": 22,
+    "rho_within": -0.71,
+    "p_within": 0.01,
+    "house_value_pp": 3.79
+   },
+   {
+    "key": "New River",
+    "label": "New River, Lea and Ravensbourne",
+    "n": 20,
+    "deaths": 6282,
+    "population": 1312568,
+    "rate": 47.9,
+    "elev_median": 40.0,
+    "elev_max": 88,
+    "rho_within": -0.62,
+    "p_within": 0.004,
+    "house_value_pp": 4.47
+   },
+   {
+    "key": "Kew",
+    "label": "Thames at Kew and Hammersmith",
+    "n": 6,
+    "deaths": 613,
+    "population": 344846,
+    "rate": 17.8,
+    "elev_median": 62.5,
+    "elev_max": 350,
+    "rho_within": -0.52,
+    "p_within": 0.3,
+    "house_value_pp": 7.78
+   }
+  ],
+  "ratio_battersea_kew": 6.4,
+  "ratio_battersea_newriver": 2.4,
+  "battersea_all_below_ft": 22,
+  "r2": {
+   "elev": 0.63,
+   "water": 0.58,
+   "both": 0.75,
+   "all": 0.77
+  },
+  "elev_fall_per_doubling_alone": 0.304,
+  "elev_fall_per_doubling_with_water": 0.262,
+  "elev_coef_shrink": 0.162,
+  "kew_vs_battersea_same_elev": 0.44,
+  "newriver_vs_battersea_same_elev": 0.97,
+  "p_newriver_same_elev": 0.91,
+  "lhv_fall_per_doubling_all": 0.171,
+  "p_lhv_all": 0.07
+ },
+ "south": {
+  "groups": [
+   {
+    "key": "SouthwarkVauxhall",
+    "label": "Southwark and Vauxhall only",
+    "n_subdistricts": 12,
+    "deaths_1849": 2261,
+    "deaths_1854": 2458,
+    "change": 0.087
+   },
+   {
+    "key": "SouthwarkVauxhall_Lambeth",
+    "label": "Both companies",
+    "n_subdistricts": 16,
+    "deaths_1849": 3905,
+    "deaths_1854": 2547,
+    "change": -0.348
+   },
+   {
+    "key": "Lambeth",
+    "label": "Lambeth only",
+    "n_subdistricts": 4,
+    "deaths_1849": 162,
+    "deaths_1854": 37,
+    "change": -0.772
+   }
+  ],
+  "simon": {
+   "lambeth_1849": 12.2,
+   "lambeth_1854": 3.6,
+   "southwark_1849": 12.2,
+   "southwark_1854": 13.5,
+   "houses_lambeth": 24854,
+   "houses_southwark": 39726,
+   "deaths_lambeth_1849": 1925,
+   "deaths_lambeth_1854": 611,
+   "deaths_southwark_1849": 2880,
+   "deaths_southwark_1854": 3476,
+   "n_districts": 9,
+   "ratio_1854": 3.8,
+   "lambeth_fall": 0.705
+  },
+  "table_ix": [
+   {
+    "supplier": "Southwark and Vauxhall Company",
+    "houses": 40046,
+    "deaths": 1263,
+    "deaths_per_10000_houses": 315
+   },
+   {
+    "supplier": "Lambeth Company",
+    "houses": 26107,
+    "deaths": 98,
+    "deaths_per_10000_houses": 37
+   },
+   {
+    "supplier": "Rest of London",
+    "houses": 256423,
+    "deaths": 1422,
+    "deaths_per_10000_houses": 59
+   }
+  ],
+  "table_ix_ratio": 8.5
+ },
+ "national": {
+  "cholera_deaths_1849": 53293,
+  "diarrhoea_deaths_1849": 18887,
+  "peak_date": "6 September",
+  "peak_deaths": 1121,
+  "aug_sep_share": 0.68,
+  "monthly": [
+   658,
+   371,
+   302,
+   107,
+   327,
+   2046,
+   7570,
+   15872,
+   20379,
+   4654,
+   844,
+   163
+  ],
+  "weekly": [
+   [
+    "1849-01-06",
+    146
+   ],
+   [
+    "1849-01-13",
+    178
+   ],
+   [
+    "1849-01-20",
+    108
+   ],
+   [
+    "1849-01-27",
+    148
+   ],
+   [
+    "1849-02-03",
+    128
+   ],
+   [
+    "1849-02-10",
+    119
+   ],
+   [
+    "1849-02-17",
+    75
+   ],
+   [
+    "1849-02-24",
+    86
+   ],
+   [
+    "1849-03-03",
+    63
+   ],
+   [
+    "1849-03-10",
+    50
+   ],
+   [
+    "1849-03-17",
+    101
+   ],
+   [
+    "1849-03-24",
+    70
+   ],
+   [
+    "1849-03-31",
+    59
+   ],
+   [
+    "1849-04-07",
+    30
+   ],
+   [
+    "1849-04-14",
+    20
+   ],
+   [
+    "1849-04-21",
+    30
+   ],
+   [
+    "1849-04-28",
+    19
+   ],
+   [
+    "1849-05-05",
+    33
+   ],
+   [
+    "1849-05-12",
+    51
+   ],
+   [
+    "1849-05-19",
+    62
+   ],
+   [
+    "1849-05-26",
+    71
+   ],
+   [
+    "1849-06-02",
+    172
+   ],
+   [
+    "1849-06-09",
+    404
+   ],
+   [
+    "1849-06-16",
+    501
+   ],
+   [
+    "1849-06-23",
+    453
+   ],
+   [
+    "1849-06-30",
+    634
+   ],
+   [
+    "1849-07-07",
+    788
+   ],
+   [
+    "1849-07-14",
+    1384
+   ],
+   [
+    "1849-07-21",
+    2207
+   ],
+   [
+    "1849-07-28",
+    2134
+   ],
+   [
+    "1849-08-04",
+    2504
+   ],
+   [
+    "1849-08-11",
+    2799
+   ],
+   [
+    "1849-08-18",
+    4099
+   ],
+   [
+    "1849-08-25",
+    3851
+   ],
+   [
+    "1849-09-01",
+    4415
+   ],
+   [
+    "1849-09-08",
+    6956
+   ],
+   [
+    "1849-09-15",
+    5858
+   ],
+   [
+    "1849-09-22",
+    3697
+   ],
+   [
+    "1849-09-29",
+    2749
+   ],
+   [
+    "1849-10-06",
+    2411
+   ],
+   [
+    "1849-10-13",
+    1260
+   ],
+   [
+    "1849-10-20",
+    571
+   ],
+   [
+    "1849-10-27",
+    516
+   ],
+   [
+    "1849-11-03",
+    434
+   ],
+   [
+    "1849-11-10",
+    302
+   ],
+   [
+    "1849-11-17",
+    196
+   ],
+   [
+    "1849-11-24",
+    118
+   ],
+   [
+    "1849-12-01",
+    76
+   ],
+   [
+    "1849-12-08",
+    50
+   ],
+   [
+    "1849-12-15",
+    41
+   ],
+   [
+    "1849-12-22",
+    38
+   ],
+   [
+    "1849-12-29",
+    25
+   ],
+   [
+    "1850-01-05",
+    3
+   ]
+  ]
+ },
+ "broad": {
+  "street_nodes": 552,
+  "largest_component_share": 0.987,
+  "deaths_on_map": 578,
+  "addresses": 321,
+  "max_at_address": 18,
+  "median_dist_m": 117,
+  "median_walk_m": 172,
+  "within_100m": 225,
+  "within_200m": 508,
+  "within_300m": 568,
+  "share_within_200m": 0.879,
+  "share_within_300m": 0.983,
+  "nearest_broad_straight": 356,
+  "share_nearest_broad_straight": 0.616,
+  "nearest_broad_walk": 375,
+  "share_nearest_broad_walk": 0.649,
+  "nearer_other_pump_walk": 203,
+  "walk_unreachable": 0,
+  "n_pumps": 13,
+  "dist_hist": [
+   70,
+   155,
+   153,
+   130,
+   44,
+   16,
+   8,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "nearest_walk_counts": {
+   "Broad St": 375,
+   "Crown Chapel": 73,
+   "Briddle St": 55,
+   "So Soho": 24,
+   "Warwick": 20,
+   "Oxford St #1": 15,
+   "Oxford St #2": 11,
+   "Dean St": 2,
+   "Coventry St": 2,
+   "Gt Marlborough": 1
+  },
+  "rings": [
+   {
+    "lo": 0,
+    "hi": 100,
+    "deaths": 225,
+    "per_ha": 71.6
+   },
+   {
+    "lo": 100,
+    "hi": 200,
+    "deaths": 283,
+    "per_ha": 30.0
+   },
+   {
+    "lo": 200,
+    "hi": 300,
+    "deaths": 60,
+    "per_ha": 3.8
+   },
+   {
+    "lo": 300,
+    "hi": 400,
+    "deaths": 10,
+    "per_ha": 0.5
+   },
+   {
+    "lo": 400,
+    "hi": 500,
+    "deaths": 0,
+    "per_ha": 0.0
+   }
+  ],
+  "ring_ratio_first_to_third": 18.8,
+  "attacks_date_unknown": 45,
+  "dates_total_deaths": 616,
+  "dates_total_attacks": 616,
+  "peak_attack_date": "1 September",
+  "peak_attacks": 143,
+  "attacks_before_handle": 516,
+  "attacks_from_handle": 55,
+  "attacks_31aug_2sep": 315,
+  "attacks_day_before_handle": 28,
+  "series": [
+   [
+    "1854-08-19",
+    1,
+    1
+   ],
+   [
+    "1854-08-20",
+    1,
+    0
+   ],
+   [
+    "1854-08-21",
+    1,
+    2
+   ],
+   [
+    "1854-08-22",
+    0,
+    0
+   ],
+   [
+    "1854-08-23",
+    1,
+    0
+   ],
+   [
+    "1854-08-24",
+    1,
+    2
+   ],
+   [
+    "1854-08-25",
+    0,
+    0
+   ],
+   [
+    "1854-08-26",
+    1,
+    0
+   ],
+   [
+    "1854-08-27",
+    1,
+    1
+   ],
+   [
+    "1854-08-28",
+    1,
+    0
+   ],
+   [
+    "1854-08-29",
+    1,
+    1
+   ],
+   [
+    "1854-08-30",
+    8,
+    2
+   ],
+   [
+    "1854-08-31",
+    56,
+    3
+   ],
+   [
+    "1854-09-01",
+    143,
+    70
+   ],
+   [
+    "1854-09-02",
+    116,
+    127
+   ],
+   [
+    "1854-09-03",
+    54,
+    76
+   ],
+   [
+    "1854-09-04",
+    46,
+    71
+   ],
+   [
+    "1854-09-05",
+    36,
+    45
+   ],
+   [
+    "1854-09-06",
+    20,
+    37
+   ],
+   [
+    "1854-09-07",
+    28,
+    32
+   ],
+   [
+    "1854-09-08",
+    12,
+    30
+   ],
+   [
+    "1854-09-09",
+    11,
+    24
+   ],
+   [
+    "1854-09-10",
+    5,
+    18
+   ],
+   [
+    "1854-09-11",
+    5,
+    15
+   ],
+   [
+    "1854-09-12",
+    1,
+    6
+   ],
+   [
+    "1854-09-13",
+    3,
+    13
+   ],
+   [
+    "1854-09-14",
+    0,
+    6
+   ],
+   [
+    "1854-09-15",
+    1,
+    8
+   ],
+   [
+    "1854-09-16",
+    4,
+    6
+   ],
+   [
+    "1854-09-17",
+    2,
+    5
+   ],
+   [
+    "1854-09-18",
+    3,
+    2
+   ],
+   [
+    "1854-09-19",
+    0,
+    3
+   ],
+   [
+    "1854-09-20",
+    0,
+    0
+   ],
+   [
+    "1854-09-21",
+    2,
+    0
+   ],
+   [
+    "1854-09-22",
+    1,
+    2
+   ],
+   [
+    "1854-09-23",
+    1,
+    3
+   ],
+   [
+    "1854-09-24",
+    1,
+    0
+   ],
+   [
+    "1854-09-25",
+    1,
+    0
+   ],
+   [
+    "1854-09-26",
+    1,
+    2
+   ],
+   [
+    "1854-09-27",
+    1,
+    0
+   ],
+   [
+    "1854-09-28",
+    0,
+    2
+   ],
+   [
+    "1854-09-29",
+    0,
+    1
+   ],
+   [
+    "1854-09-30",
+    0,
+    0
+   ]
+  ]
+ },
+ "long": {
+  "n_units": 31,
+  "n_msoas": 353,
+  "n_msoas_dropped": 11,
+  "pop_2021": 2981956,
+  "max_seed_km": 4,
+  "n_seeds": 79,
+  "chol_ahc": {
+   "rho": -0.07,
+   "p": 0.727,
+   "N": {
+    "rho": -0.35,
+    "p": 0.11,
+    "n": 22
+   },
+   "S": {
+    "rho": 0.12,
+    "p": 0.77,
+    "n": 9
+   }
+  },
+  "chol_total": {
+   "rho": -0.08,
+   "p": 0.674,
+   "N": {
+    "rho": -0.17,
+    "p": 0.44,
+    "n": 22
+   },
+   "S": {
+    "rho": -0.02,
+    "p": 0.97,
+    "n": 9
+   }
+  },
+  "hv_ahc": {
+   "rho": 0.33,
+   "p": 0.073,
+   "N": {
+    "rho": 0.38,
+    "p": 0.09,
+    "n": 22
+   },
+   "S": {
+    "rho": 0.57,
+    "p": 0.11,
+    "n": 9
+   }
+  },
+  "hv_total": {
+   "rho": 0.46,
+   "p": 0.01,
+   "N": {
+    "rho": 0.5,
+    "p": 0.02,
+    "n": 22
+   },
+   "S": {
+    "rho": 0.37,
+    "p": 0.33,
+    "n": 9
+   },
+   "perm_p": 0.011
+  },
+  "hv_chol": {
+   "rho": -0.44,
+   "p": 0.013,
+   "N": {
+    "rho": -0.4,
+    "p": 0.06,
+    "n": 22
+   },
+   "S": {
+    "rho": -0.08,
+    "p": 0.83,
+    "n": 9
+   }
+  },
+  "worst8": {
+   "units": [
+    "Rotherhithe",
+    "Bermondsey",
+    "Borough (St Saviour, St Olave, St George)",
+    "Newington",
+    "Lambeth",
+    "Wandsworth",
+    "Camberwell",
+    "Bethnal Green"
+   ],
+   "rate_1849": 128.5,
+   "income_ahc": 46700,
+   "income_total": 77200
+  },
+  "best8": {
+   "units": [
+    "Hackney",
+    "West End (St James, Mayfair, Strand, St Martin)",
+    "St Pancras",
+    "Islington",
+    "Clerkenwell",
+    "Marylebone",
+    "Paddington",
+    "Hampstead"
+   ],
+   "rate_1849": 20.3,
+   "income_ahc": 41200,
+   "income_total": 73200
+  },
+  "london_income_ahc_all": 43400,
+  "examples": {
+   "Rotherhithe": {
+    "rate_1849": 204.6,
+    "income_ahc": 41577,
+    "income_total": 78551,
+    "house_value_pp": 3.433,
+    "msoas": 5,
+    "rank_income_ahc": 17,
+    "rank_rate": 1,
+    "rank_house_value": 22
+   },
+   "Bermondsey": {
+    "rate_1849": 164.2,
+    "income_ahc": 43763,
+    "income_total": 71589,
+    "house_value_pp": 3.049,
+    "msoas": 6,
+    "rank_income_ahc": 12,
+    "rank_rate": 2,
+    "rank_house_value": 27
+   },
+   "Wandsworth": {
+    "rate_1849": 99.9,
+    "income_ahc": 52582,
+    "income_total": 83097,
+    "house_value_pp": 3.992,
+    "msoas": 49,
+    "rank_income_ahc": 2,
+    "rank_rate": 6,
+    "rank_house_value": 11
+   },
+   "Bethnal Green": {
+    "rate_1849": 90.4,
+    "income_ahc": 32579,
+    "income_total": 65843,
+    "house_value_pp": 1.26,
+    "msoas": 5,
+    "rank_income_ahc": 30,
+    "rank_rate": 8,
+    "rank_house_value": 31
+   },
+   "Hampstead": {
+    "rate_1849": 7.8,
+    "income_ahc": 50612,
+    "income_total": 88210,
+    "house_value_pp": 5.076,
+    "msoas": 7,
+    "rank_income_ahc": 5,
+    "rank_rate": 31,
+    "rank_house_value": 9
+   },
+   "Chelsea": {
+    "rate_1849": 46.3,
+    "income_ahc": 54021,
+    "income_total": 78907,
+    "house_value_pp": 3.179,
+    "msoas": 4,
+    "rank_income_ahc": 1,
+    "rank_rate": 17,
+    "rank_house_value": 25
+   },
+   "Newington": {
+    "rate_1849": 143.8,
+    "income_ahc": 36412,
+    "income_total": 63192,
+    "house_value_pp": 3.289,
+    "msoas": 5,
+    "rank_income_ahc": 26,
+    "rank_rate": 4,
+    "rank_house_value": 24
+   },
+   "Paddington": {
+    "rate_1849": 8.5,
+    "income_ahc": 38735,
+    "income_total": 67346,
+    "house_value_pp": 5.725,
+    "msoas": 10,
+    "rank_income_ahc": 21,
+    "rank_rate": 30,
+    "rank_house_value": 5
+   },
+   "Lambeth": {
+    "rate_1849": 120.1,
+    "income_ahc": 44325,
+    "income_total": 75058,
+    "house_value_pp": 3.787,
+    "msoas": 24,
+    "rank_income_ahc": 11,
+    "rank_rate": 5,
+    "rank_house_value": 13
+   },
+   "Stepney": {
+    "rate_1849": 46.8,
+    "income_ahc": 32483,
+    "income_total": 68125,
+    "house_value_pp": 2.822,
+    "msoas": 6,
+    "rank_income_ahc": 31,
+    "rank_rate": 16,
+    "rank_house_value": 29
+   }
+  },
+  "richest_unit": "Chelsea",
+  "richest_ahc": 54021,
+  "poorest_unit": "Stepney",
+  "poorest_ahc": 32483,
+  "rank_cholera_of_richest": 17,
+  "rank_cholera_of_poorest": 16
+ },
+ "facts": {
+  "england_wales_1848_49_deaths": 52000,
+  "london_1849_deaths_wikipedia": 14137,
+  "london_1832_deaths": 6536,
+  "london_1853_54_deaths": 10739,
+  "broad_street_deaths_wikipedia": 420,
+  "broad_street_first_three_days": 127,
+  "snow_born": 1813,
+  "pump_handle_removed": "8 September 1854",
+  "public_health_act": 1848,
+  "east_end_1866_deaths": 5596,
+  "snow_decidedly_nearer_other_pump": 10,
+  "snow_families_preferred_broad": 5,
+  "snow_children_school": 3,
+  "snow_drank_pump_water": 61,
+  "sources": {
+   "england_wales_1848_49_deaths": "1846-1860 cholera pandemic",
+   "london_1849_deaths_wikipedia": "History of cholera; 1846-1860 cholera pandemic",
+   "london_1832_deaths": "History of cholera",
+   "london_1853_54_deaths": "History of cholera",
+   "broad_street_deaths_wikipedia": "1854 Broad Street cholera outbreak",
+   "broad_street_first_three_days": "1854 Broad Street cholera outbreak",
+   "snow_born": "John Snow",
+   "pump_handle_removed": "1854 Broad Street cholera outbreak (quoting Snow 1855)",
+   "public_health_act": "Public Health Act 1848",
+   "east_end_1866_deaths": "History of cholera",
+   "snow_decidedly_nearer_other_pump": "1854 Broad Street cholera outbreak (quoting Snow 1855)",
+   "snow_families_preferred_broad": "same",
+   "snow_children_school": "same",
+   "snow_drank_pump_water": "same"
+  },
+  "farr_share_of_wiki_london": 0.991
+ }
+}

@@ -1,0 +1,36 @@
+subDistrict,district,supplier,deaths1849,deaths1854
+"St. Saviour, Southwark","St. Saviour, Southwark",SouthwarkVauxhall,283,371
+"St. Olave, Southwark","St. Olave, Southwark",SouthwarkVauxhall,157,161
+"St. John, Horsleydown","St. Olave, Southwark",SouthwarkVauxhall,192,148
+"St. James, Bermondsey",Bermondsey,SouthwarkVauxhall,249,362
+St. Mary Magdalen,Bermondsey,SouthwarkVauxhall,259,244
+Leather Market,Bermondsey,SouthwarkVauxhall,226,237
+Rotherhithe,Rotherhithe,SouthwarkVauxhall,352,282
+Battersea,Wandsworth,SouthwarkVauxhall,111,171
+Wandsworth,Wandsworth,SouthwarkVauxhall,97,59
+Putney,Wandsworth,SouthwarkVauxhall,8,9
+Camberwell,Camberwell,SouthwarkVauxhall,235,240
+Peckham,Camberwell,SouthwarkVauxhall,92,174
+"Christchurch, Southwark","St. Saviour, Southwark",SouthwarkVauxhall_Lambeth,256,113
+Kent Road,"St. George, Southwark",SouthwarkVauxhall_Lambeth,267,174
+Borough Road,"St. George, Southwark",SouthwarkVauxhall_Lambeth,312,270
+London Road,"St. George, Southwark",SouthwarkVauxhall_Lambeth,257,93
+"Trinity, Newington",Newington,SouthwarkVauxhall_Lambeth,318,210
+"St. Peter, Walworth",Newington,SouthwarkVauxhall_Lambeth,446,388
+"St. Mary, Newington",Newington,SouthwarkVauxhall_Lambeth,143,92
+Waterloo Road (1st),Lambeth,SouthwarkVauxhall_Lambeth,193,58
+Waterloo Road (2nd),Lambeth,SouthwarkVauxhall_Lambeth,243,117
+Lambeth Church (1st),Lambeth,SouthwarkVauxhall_Lambeth,215,49
+Lambeth Church (2nd),Lambeth,SouthwarkVauxhall_Lambeth,544,193
+Kennington (1st),Lambeth,SouthwarkVauxhall_Lambeth,187,303
+Kennington (2nd),Lambeth,SouthwarkVauxhall_Lambeth,153,142
+Brixton,Lambeth,SouthwarkVauxhall_Lambeth,81,48
+Clapham,Wandsworth,SouthwarkVauxhall_Lambeth,114,165
+"St. George, Camberwell",Camberwell,SouthwarkVauxhall_Lambeth,176,132
+Norwood,Lambeth,Lambeth,2,10
+Streatham,Wandsworth,Lambeth,154,15
+Dulwich,Camberwell,Lambeth,1,0
+Sydenham,Lewisham,Lambeth,5,12
+First 12 sub-districts,na,first12,2261,2458
+Next 16 sub-districts,na,next16,3905,2547
+Last 4 sub-districts,na,last4,162,37

@@ -1,0 +1,365 @@
+MSOA21CD,MSOA21NM,LAD22NM,lon,lat,pop2021,income_total,income_net_ahc,unit,seed,seed_km,in_scope
+E02000001,City of London 001,City of London,-0.09469,51.51915,8583,91506,50879,City of London,City of London,0.55743,True
+E02000881,Tower Hamlets 018,Tower Hamlets,-0.01030,51.51649,10831,70803,31958,Poplar,Poplar,0.79406,True
+E02000932,Wandsworth 010,Wandsworth,-0.20201,51.46076,12843,94112,64920,Wandsworth,Wandsworth,0.78214,True
+E02000619,Lambeth 002,Lambeth,-0.11188,51.49220,9099,66162,36616,Lambeth,Lambeth,0.61885,True
+E02000654,Lewisham 002,Lewisham,-0.03257,51.48298,8789,57836,35192,Greenwich,Deptford,0.75125,True
+E02000193,Camden 028,Camden,-0.12424,51.51795,5961,70221,37784,St Giles,St Giles,0.35216,True
+E02000680,Lewisham 028,Lewisham,-0.06111,51.43446,7035,77466,40440,Lewisham,Lower Sydenham,1.20609,True
+E02000643,Lambeth 026,Lambeth,-0.12528,51.43923,9378,75500,45625,Wandsworth,Streatham,0.84466,True
+E02000577,Kensington and Chelsea 001,Kensington and Chelsea,-0.20898,51.52342,7711,47100,32455,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,1.20418,True
+E02000943,Wandsworth 021,Wandsworth,-0.15267,51.44777,8721,93136,64361,Wandsworth,Upper Tooting,1.20172,True
+E02000583,Kensington and Chelsea 007,Kensington and Chelsea,-0.20903,51.51074,6428,87584,55360,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,0.32471,True
+E02000828,Southwark 022,Southwark,-0.06632,51.47528,8813,65168,37620,Camberwell,Peckham,0.14832,True
+E02000557,Islington 004,Islington,-0.13644,51.56323,8782,64661,41170,Islington,Upper Holloway,0.60678,True
+E02007111,Hackney 033,Hackney,-0.07808,51.52873,5949,78661,42340,Shoreditch,Shoreditch,0.60648,True
+E02000186,Camden 021,Camden,-0.14180,51.53502,6223,78067,36524,St Pancras,Camden Town,0.44935,True
+E02000375,Hammersmith and Fulham 004,Hammersmith and Fulham,-0.22621,51.50762,7485,65802,39461,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,1.53505,True
+E02006853,Tower Hamlets 032,Tower Hamlets,-0.02053,51.49810,11015,79701,42455,Poplar,Poplar,1.44615,True
+E02006993,Greenwich 041,Greenwich,0.01373,51.49541,8401,84840,50012,Greenwich,Greenwich,2.52307,True
+E02000335,Greenwich 023,Greenwich,0.05833,51.46256,6675,88719,48606,Lewisham,Eltham,1.31552,True
+E02000567,Islington 014,Islington,-0.08769,51.54593,10438,75017,43728,Islington,Highbury,1.35973,True
+E02000685,Lewisham 033,Lewisham,-0.06167,51.42855,8131,67693,39721,Lewisham,Lower Sydenham,1.02653,True
+E02000174,Camden 009,Camden,-0.13576,51.54915,8086,72370,37331,St Pancras,Kentish Town,0.34485,True
+E02000969,Westminster 010,Westminster,-0.19382,51.52165,9607,54201,31271,Paddington,Maida Vale,0.88469,True
+E02000634,Lambeth 017,Lambeth,-0.13321,51.46000,6774,71040,46762,Wandsworth,Clapham,0.35495,True
+E02000983,Westminster 024,Westminster,-0.13693,51.48686,7695,68516,37393,Belgrave,Pimlico,0.31131,True
+E02000649,Lambeth 032,Lambeth,-0.13106,51.42648,12477,74681,40909,Wandsworth,Streatham,0.63237,True
+E02000947,Wandsworth 025,Wandsworth,-0.19887,51.44361,9341,98417,65252,Wandsworth,Wandsworth,1.52422,True
+E02000184,Camden 019,Camden,-0.13625,51.53887,8908,68987,34787,St Pancras,Camden Town,0.44680,True
+E02000377,Hammersmith and Fulham 006,Hammersmith and Fulham,-0.24037,51.50376,7795,67295,39768,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,1.28895,True
+E02000563,Islington 010,Islington,-0.12677,51.55322,8682,63154,37207,Islington,Lower Holloway,0.58750,True
+E02000873,Tower Hamlets 010,Tower Hamlets,-0.04203,51.52638,9850,77599,33851,Stepney,Stepney,0.79103,True
+E02000671,Lewisham 019,Lewisham,-0.04153,51.44654,8740,75623,43545,Lewisham,Lower Sydenham,2.07103,True
+E02000675,Lewisham 023,Lewisham,0.01842,51.44110,8527,76301,42417,Lewisham,Lee,1.28307,True
+E02000954,Wandsworth 032,Wandsworth,-0.16216,51.43272,6100,84482,57060,Wandsworth,Upper Tooting,0.76274,True
+E02000587,Kensington and Chelsea 011,Kensington and Chelsea,-0.19633,51.49785,6496,104155,58862,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,0.33185,True
+E02000957,Wandsworth 035,Wandsworth,-0.16461,51.42434,10861,75268,44511,Wandsworth,Upper Tooting,1.68688,True
+E02000183,Camden 018,Camden,-0.15277,51.54053,7591,76763,42334,St Pancras,Camden Town,0.71900,True
+E02000396,Hammersmith and Fulham 025,Hammersmith and Fulham,-0.19320,51.46927,6898,89265,49152,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,1.28147,True
+E02000653,Lewisham 001,Lewisham,-0.03836,51.49011,12606,80087,40441,Rotherhithe,Rotherhithe,1.02871,True
+E02000813,Southwark 007,Southwark,-0.05141,51.49792,10223,73575,39598,Rotherhithe,Rotherhithe,0.37616,True
+E02000815,Southwark 009,Southwark,-0.09552,51.49601,7613,81885,45391,"Borough (St Saviour, St Olave, St George)",Southwark,0.75479,True
+E02000363,Hackney 019,Hackney,-0.04613,51.54604,11882,58764,33575,Hackney,Homerton,0.56803,True
+E02000631,Lambeth 014,Lambeth,-0.09850,51.46438,9525,80323,45910,Lambeth,Brixton,0.95441,True
+E02006941,Southwark 035,Southwark,-0.07370,51.50226,5312,116128,63550,Bermondsey,Bermondsey,0.83024,True
+E02000818,Southwark 012,Southwark,-0.09206,51.49128,9791,66998,38807,Newington,Walworth,0.43644,True
+E02000938,Wandsworth 016,Wandsworth,-0.23265,51.45445,10767,73640,41432,Wandsworth,Putney,1.28777,True
+E02006801,Lambeth 036,Lambeth,-0.11227,51.50107,8567,71262,46319,Lambeth,Lambeth,0.58809,True
+E02000650,Lambeth 033,Lambeth,-0.08686,51.42363,7665,72504,38280,Lambeth,West Norwood,0.94936,True
+E02000389,Hammersmith and Fulham 018,Hammersmith and Fulham,-0.22146,51.48163,8645,92096,53820,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,1.31890,True
+E02000589,Kensington and Chelsea 013,Kensington and Chelsea,-0.18944,51.49433,7250,80630,47998,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,0.77424,True
+E02007009,Lewisham 041,Lewisham,-0.00959,51.45743,9142,61125,38432,Lewisham,Lewisham,0.28850,True
+E02006930,Greenwich 037,Greenwich,0.00946,51.48567,9846,88414,49631,Greenwich,Greenwich,1.60869,True
+E02000361,Hackney 017,Hackney,-0.05499,51.54747,8061,70311,39885,Hackney,Hackney,0.30388,True
+E02000678,Lewisham 026,Lewisham,0.00955,51.43394,6961,67273,35505,Lewisham,Lee,1.90163,True
+E02000661,Lewisham 009,Lewisham,0.00520,51.46233,6491,85038,44526,Lewisham,Lee,1.28469,True
+E02000670,Lewisham 018,Lewisham,-0.01354,51.44610,6706,62475,37551,Lewisham,Lewisham,1.22424,True
+E02000387,Hammersmith and Fulham 016,Hammersmith and Fulham,-0.21511,51.48501,6024,66580,48303,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,1.51187,True
+E02000935,Wandsworth 013,Wandsworth,-0.24910,51.45486,7375,63671,30794,Wandsworth,Putney,2.31774,True
+E02000585,Kensington and Chelsea 009,Kensington and Chelsea,-0.20982,51.50097,8088,82473,49397,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,1.07308,True
+E02000679,Lewisham 027,Lewisham,-0.04658,51.43415,8134,77783,38298,Lewisham,Lower Sydenham,0.65854,True
+E02000593,Kensington and Chelsea 017,Kensington and Chelsea,-0.19071,51.48896,7393,77322,43996,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,1.31692,True
+E02000974,Westminster 015,Westminster,-0.16977,51.51612,8705,75334,42059,Paddington,Paddington,0.36172,True
+E02000894,Tower Hamlets 031,Tower Hamlets,-0.02001,51.49000,11007,85624,40818,Poplar,Poplar,2.33939,True
+E02000958,Wandsworth 036,Wandsworth,-0.14921,51.42400,8276,81157,47327,Wandsworth,Streatham,1.64944,True
+E02000822,Southwark 016,Southwark,-0.09040,51.48764,6719,58614,33608,Newington,Walworth,0.31908,True
+E02000383,Hammersmith and Fulham 012,Hammersmith and Fulham,-0.20985,51.49310,8462,67038,44893,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,1.35755,True
+E02007108,Hackney 030,Hackney,-0.07534,51.54564,5941,68999,47289,Shoreditch,Haggerston,1.36579,True
+E02000837,Southwark 031,Southwark,-0.09254,51.45319,8559,125416,63370,Lambeth,Brixton,1.56063,True
+E02000590,Kensington and Chelsea 014,Kensington and Chelsea,-0.16733,51.49225,5974,72824,41452,"Kensington (with Hammersmith, Brompton and Fulham)",Brompton,0.34381,True
+E02000324,Greenwich 012,Greenwich,0.03653,51.48293,7865,62861,35796,Greenwich,Greenwich,3.32276,True
+E02000937,Wandsworth 015,Wandsworth,-0.16593,51.45505,8161,104802,63341,Wandsworth,Battersea,1.72284,True
+E02000166,Camden 001,Camden,-0.14674,51.56287,7745,77800,42473,St Pancras,Gospel Oak,1.11848,True
+E02000945,Wandsworth 023,Wandsworth,-0.24199,51.44687,7842,62346,32629,Wandsworth,Putney,2.31905,True
+E02000192,Camden 027,Camden,-0.11326,51.52178,6659,71935,34776,Holborn,Holborn,0.52997,True
+E02000633,Lambeth 016,Lambeth,-0.11521,51.45941,9160,66181,42729,Lambeth,Brixton,0.33517,True
+E02000644,Lambeth 027,Lambeth,-0.11354,51.43603,8521,79746,45064,Wandsworth,Streatham,1.18156,True
+E02000390,Hammersmith and Fulham 019,Hammersmith and Fulham,-0.20919,51.48036,6195,73947,51830,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,0.98102,True
+E02000352,Hackney 008,Hackney,-0.08424,51.56366,6749,69649,38212,Hackney,Stoke Newington,0.28018,True
+E02000326,Greenwich 014,Greenwich,0.02805,51.48159,7798,76655,44030,Greenwich,Greenwich,2.71886,True
+E02000884,Tower Hamlets 021,Tower Hamlets,-0.06663,51.51399,12769,77943,36522,Whitechapel,Whitechapel,0.31564,True
+E02000592,Kensington and Chelsea 016,Kensington and Chelsea,-0.18013,51.49214,5764,122187,63715,"Kensington (with Hammersmith, Brompton and Fulham)",Brompton,0.61383,True
+E02000323,Greenwich 011,Greenwich,0.06980,51.48393,12861,59687,35099,Lewisham,Eltham,3.79239,True
+E02000185,Camden 020,Camden,-0.18783,51.53892,8882,52660,30220,Paddington,Maida Vale,1.12234,True
+E02000645,Lambeth 028,Lambeth,-0.10075,51.43435,9533,78529,42809,Lambeth,West Norwood,0.72762,True
+E02000329,Greenwich 017,Greenwich,0.08729,51.47663,6332,66225,40527,Lewisham,Eltham,3.55649,True
+E02000386,Hammersmith and Fulham 015,Hammersmith and Fulham,-0.20492,51.48708,7582,59085,38971,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,1.66941,True
+E02000348,Hackney 004,Hackney,-0.06925,51.56943,8106,69305,27992,Hackney,Upper Clapton,0.63586,True
+E02000936,Wandsworth 014,Wandsworth,-0.21514,51.45638,9366,82675,56856,Wandsworth,Putney,0.50592,True
+E02007109,Hackney 031,Hackney,-0.07583,51.54157,7614,63590,43977,Shoreditch,Haggerston,0.95215,True
+E02000941,Wandsworth 019,Wandsworth,-0.18445,51.45151,10174,99498,60312,Wandsworth,Wandsworth,0.82075,True
+E02000391,Hammersmith and Fulham 020,Hammersmith and Fulham,-0.19269,51.47693,7587,83914,54447,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,1.41762,True
+E02000175,Camden 010,Camden,-0.19169,51.54956,9082,78946,48034,Hampstead,Hampstead,1.20532,True
+E02000962,Westminster 003,Westminster,-0.17564,51.52891,7703,67862,44763,Marylebone,St John's Wood,0.31621,True
+E02000347,Hackney 003,Hackney,-0.08089,51.57028,8151,77471,31607,Hackney,Stoke Newington,1.02933,True
+E02000666,Lewisham 014,Lewisham,-0.02688,51.45601,7189,80367,45960,Lewisham,Lewisham,0.92328,True
+E02000648,Lambeth 031,Lambeth,-0.10008,51.42606,7825,63873,36598,Lambeth,West Norwood,0.23161,True
+E02000687,Lewisham 035,Lewisham,-0.04682,51.42610,8267,70060,41907,Lewisham,Lower Sydenham,0.23709,True
+E02007113,Tower Hamlets 035,Tower Hamlets,-0.00796,51.50722,7461,91434,40188,Poplar,Poplar,0.78601,True
+E02000982,Westminster 023,Westminster,-0.14795,51.48860,7638,65357,42228,Belgrave,Pimlico,0.56122,True
+E02000889,Tower Hamlets 026,Tower Hamlets,-0.06349,51.50868,8965,82123,41366,St George in the East,Wapping,0.25779,True
+E02000647,Lambeth 030,Lambeth,-0.11313,51.42866,8592,78076,46102,Lambeth,West Norwood,1.01090,True
+E02000597,Kensington and Chelsea 021,Kensington and Chelsea,-0.18091,51.48109,6336,62435,35774,Chelsea,Chelsea,1.17298,True
+E02000807,Southwark 001,Southwark,-0.04386,51.50340,8227,87651,48062,Rotherhithe,Rotherhithe,0.61523,True
+E02000823,Southwark 017,Southwark,-0.09806,51.48305,8685,65383,37817,Newington,Newington,0.58270,True
+E02000953,Wandsworth 031,Wandsworth,-0.18275,51.43592,7505,96061,65132,Wandsworth,Upper Tooting,1.37757,True
+E02000376,Hammersmith and Fulham 005,Hammersmith and Fulham,-0.23124,51.50393,6701,63521,40757,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,1.25694,True
+E02000328,Greenwich 016,Greenwich,0.01342,51.48058,6512,90463,49038,Greenwich,Greenwich,1.69668,True
+E02000646,Lambeth 029,Lambeth,-0.12968,51.43436,9499,76121,46402,Wandsworth,Streatham,0.25751,True
+E02000581,Kensington and Chelsea 005,Kensington and Chelsea,-0.21397,51.51266,7392,52846,28604,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,0.57411,True
+E02000342,Greenwich 030,Greenwich,0.08074,51.44395,6348,79617,42262,Lewisham,Eltham,1.79939,True
+E02000568,Islington 015,Islington,-0.11868,51.54610,11342,62428,36835,Islington,Lower Holloway,0.38404,True
+E02006921,Hackney 029,Hackney,-0.06024,51.56531,7926,71128,28638,Hackney,Upper Clapton,0.13942,True
+E02000967,Westminster 008,Westminster,-0.15964,51.52330,6056,93638,63827,Marylebone,Marylebone,0.84614,True
+E02000955,Wandsworth 033,Wandsworth,-0.16342,51.42981,6889,73116,45926,Wandsworth,Upper Tooting,1.07824,True
+E02000928,Wandsworth 006,Wandsworth,-0.22256,51.46691,8356,112052,65218,Wandsworth,Putney,0.78236,True
+E02000555,Islington 002,Islington,-0.13057,51.56849,9571,80684,39955,Islington,Upper Holloway,0.10809,True
+E02000640,Lambeth 023,Lambeth,-0.13915,51.44619,9293,90597,57508,Wandsworth,Streatham,1.71440,True
+E02000979,Westminster 020,Westminster,-0.13465,51.49639,8085,80742,50055,Westminster,City of Westminster,0.78155,True
+E02000887,Tower Hamlets 024,Tower Hamlets,-0.02242,51.51200,10801,64790,29501,Poplar,Poplar,0.35600,True
+E02000374,Hammersmith and Fulham 003,Hammersmith and Fulham,-0.24074,51.50936,6914,64691,43408,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,1.89526,True
+E02007083,Wandsworth 038,Wandsworth,-0.13857,51.48164,7711,93982,53075,Lambeth,Vauxhall,1.46094,True
+E02000559,Islington 006,Islington,-0.10159,51.55929,9582,85530,53201,Islington,Highbury,0.43005,True
+E02000321,Greenwich 009,Greenwich,0.07758,51.48593,7721,57786,32756,Lewisham,Eltham,4.16053,False
+E02000939,Wandsworth 017,Wandsworth,-0.15745,51.45326,7819,116045,67171,Wandsworth,Upper Tooting,1.59254,True
+E02000826,Southwark 020,Southwark,-0.08662,51.47703,9882,68931,39856,Camberwell,Camberwell,0.50735,True
+E02000827,Southwark 021,Southwark,-0.09645,51.47673,11311,63423,37433,Camberwell,Camberwell,0.18872,True
+E02000676,Lewisham 024,Lewisham,-0.04185,51.43944,7816,83344,45539,Lewisham,Lower Sydenham,1.29623,True
+E02000393,Hammersmith and Fulham 022,Hammersmith and Fulham,-0.21220,51.47615,5975,90432,63222,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,0.50735,True
+E02000838,Southwark 032,Southwark,-0.06796,51.44872,9497,85311,49026,Camberwell,Dulwich,1.70997,True
+E02006991,Greenwich 039,Greenwich,0.07179,51.49325,6319,87724,52998,Lewisham,Eltham,4.83449,False
+E02000660,Lewisham 008,Lewisham,-0.02777,51.46687,8204,73841,43014,Greenwich,Deptford,1.20293,True
+E02000332,Greenwich 020,Greenwich,0.06846,51.47460,7451,77087,44428,Lewisham,Eltham,2.76494,True
+E02000948,Wandsworth 026,Wandsworth,-0.14677,51.44188,10027,90275,65826,Wandsworth,Upper Tooting,1.21179,True
+E02000625,Lambeth 008,Lambeth,-0.13146,51.47166,9304,68817,37247,Lambeth,Stockwell,0.84598,True
+E02000620,Lambeth 003,Lambeth,-0.11435,51.48846,9846,68850,42294,Lambeth,Vauxhall,0.44403,True
+E02000651,Lambeth 034,Lambeth,-0.12805,51.41776,8738,73456,42206,Wandsworth,Streatham,1.59340,True
+E02000638,Lambeth 021,Lambeth,-0.12465,51.44955,10254,68213,44940,Lambeth,Brixton,1.58554,True
+E02000963,Westminster 004,Westminster,-0.20853,51.52931,10522,55073,33592,Paddington,Maida Vale,1.40066,True
+E02000874,Tower Hamlets 011,Tower Hamlets,-0.05295,51.52437,7496,67052,28995,Bethnal Green,Bethnal Green,0.40362,True
+E02000629,Lambeth 012,Lambeth,-0.13386,51.46693,9117,82005,51220,Wandsworth,Clapham,0.42813,True
+E02000350,Hackney 006,Hackney,-0.06801,51.56417,10241,79867,34469,Hackney,Upper Clapton,0.46199,True
+E02006931,Greenwich 038,Greenwich,-0.01388,51.47455,9462,84834,45438,Greenwich,Greenwich,0.50720,True
+E02000180,Camden 015,Camden,-0.13051,51.54422,7879,66700,39286,Islington,Lower Holloway,0.81652,True
+E02000626,Lambeth 009,Lambeth,-0.10439,51.46977,8362,59682,33457,Camberwell,Camberwell,1.03085,True
+E02000933,Wandsworth 011,Wandsworth,-0.22954,51.46154,8867,88393,54460,Wandsworth,Putney,0.86787,True
+E02000663,Lewisham 011,Lewisham,-0.02090,51.46317,6796,77810,46638,Lewisham,Lewisham,0.83964,True
+E02000369,Hackney 025,Hackney,-0.07957,51.53635,13458,72205,38511,Shoreditch,Haggerston,0.72266,True
+E02000578,Kensington and Chelsea 002,Kensington and Chelsea,-0.22106,51.52300,6004,51917,35851,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,1.55758,True
+E02000573,Islington 020,Islington,-0.10144,51.53420,10313,84536,54352,Islington,Islington,0.38601,True
+E02000596,Kensington and Chelsea 020,Kensington and Chelsea,-0.18384,51.48571,6617,82570,56785,Chelsea,Chelsea,1.13228,True
+E02000825,Southwark 019,Southwark,-0.07834,51.47821,10225,62017,37521,Camberwell,Peckham,0.76783,True
+E02000173,Camden 008,Camden,-0.17362,51.54996,7493,98428,55245,Hampstead,Hampstead,0.82200,True
+E02000959,Wandsworth 037,Wandsworth,-0.14218,51.42258,7866,72278,40645,Wandsworth,Streatham,1.38361,True
+E02000562,Islington 009,Islington,-0.09572,51.55526,7865,74188,46322,Islington,Highbury,0.27257,True
+E02006783,Lewisham 037,Lewisham,0.01119,51.42811,7771,65571,36706,Lewisham,Lee,2.55350,True
+E02000871,Tower Hamlets 008,Tower Hamlets,-0.01482,51.52538,11514,66716,30490,Poplar,Bromley,0.35084,True
+E02000875,Tower Hamlets 012,Tower Hamlets,-0.02064,51.52134,13571,66256,32029,Poplar,Bromley,0.41766,True
+E02000832,Southwark 026,Southwark,-0.05924,51.46500,9688,61734,40444,Camberwell,Peckham,1.29517,True
+E02006942,Southwark 036,Southwark,-0.07925,51.49947,6746,74902,51594,Bermondsey,Bermondsey,0.53303,True
+E02000882,Tower Hamlets 019,Tower Hamlets,-0.03881,51.51716,11501,60549,31970,Stepney,Limehouse,0.46209,True
+E02006798,Lewisham 039,Lewisham,-0.03023,51.47800,8888,58869,35874,Greenwich,Deptford,0.29772,True
+E02000637,Lambeth 020,Lambeth,-0.11769,51.45244,8402,80413,52627,Lambeth,Brixton,1.05969,True
+E02000368,Hackney 024,Hackney,-0.06760,51.53653,9922,65834,38272,Shoreditch,Haggerston,0.34197,True
+E02000334,Greenwich 022,Greenwich,0.03853,51.46839,6639,73055,40060,Lewisham,Eltham,2.35472,True
+E02000187,Camden 022,Camden,-0.13260,51.53250,9783,59656,35335,St Pancras,St Pancras,0.44375,True
+E02000357,Hackney 013,Hackney,-0.03491,51.55320,6845,58237,29554,Hackney,Homerton,0.91755,True
+E02000569,Islington 016,Islington,-0.09812,51.54308,9939,75193,43780,Islington,Islington,0.69860,True
+E02000652,Lambeth 035,Lambeth,-0.13801,51.41537,7559,66556,43513,Wandsworth,Streatham,1.95241,True
+E02000890,Tower Hamlets 027,Tower Hamlets,-0.05907,51.50503,5815,101017,53735,St George in the East,Wapping,0.59348,True
+E02000821,Southwark 015,Southwark,-0.08184,51.48736,9358,55099,33671,Newington,Walworth,0.39639,True
+E02000658,Lewisham 006,Lewisham,-0.04728,51.47218,8620,72619,39814,Camberwell,Peckham,1.50587,True
+E02000630,Lambeth 013,Lambeth,-0.14518,51.46545,7538,84388,56765,Wandsworth,Clapham,0.79405,True
+E02000929,Wandsworth 007,Wandsworth,-0.17637,51.46575,8104,62230,36957,Wandsworth,Battersea,0.59840,True
+E02000327,Greenwich 015,Greenwich,0.06314,51.47993,6625,65284,35926,Lewisham,Eltham,3.27159,True
+E02000970,Westminster 011,Westminster,-0.15119,51.51866,6837,95156,64070,Marylebone,Marylebone,0.10952,True
+E02000810,Southwark 004,Southwark,-0.06997,51.49761,11896,66898,41690,Bermondsey,Bermondsey,0.53695,True
+E02000313,Greenwich 001,Greenwich,0.11558,51.50432,6489,62956,30572,Lewisham,Eltham,7.20665,False
+E02000839,Southwark 033,Southwark,-0.08109,51.43036,8480,87512,44173,Camberwell,Dulwich,0.56197,True
+E02000353,Hackney 009,Hackney,-0.07542,51.56073,7763,78848,47694,Hackney,Stoke Newington,0.56583,True
+E02000314,Greenwich 002,Greenwich,0.09488,51.50095,14106,68969,34168,Lewisham,Eltham,6.16599,False
+E02000639,Lambeth 022,Lambeth,-0.12978,51.44737,8321,65753,39820,Wandsworth,Streatham,1.70328,True
+E02000886,Tower Hamlets 023,Tower Hamlets,-0.03238,51.51217,9590,78997,36306,Stepney,Limehouse,0.25772,True
+E02000976,Westminster 017,Westminster,-0.18774,51.51393,8432,68417,42269,Paddington,Bayswater,0.35795,True
+E02000960,Westminster 001,Westminster,-0.16906,51.53440,6155,91893,49266,Marylebone,St John's Wood,0.50582,True
+E02000339,Greenwich 027,Greenwich,0.05598,51.45614,6291,78488,47468,Lewisham,Eltham,0.60642,True
+E02000824,Southwark 018,Southwark,-0.06657,51.48067,9903,61055,33661,Camberwell,Peckham,0.63001,True
+E02000579,Kensington and Chelsea 003,Kensington and Chelsea,-0.21834,51.51783,8993,65468,37601,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,1.04123,True
+E02000926,Wandsworth 004,Wandsworth,-0.17468,51.47139,11640,80728,54267,Wandsworth,Battersea,0.26508,True
+E02000880,Tower Hamlets 017,Tower Hamlets,-0.05474,51.51710,6514,62838,28604,Stepney,Stepney,0.56807,True
+E02000382,Hammersmith and Fulham 011,Hammersmith and Fulham,-0.24012,51.49399,6189,83460,44837,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,0.42171,True
+E02000359,Hackney 015,Hackney,-0.04090,51.55246,6697,74004,43193,Hackney,Lower Clapton,0.62852,True
+E02000964,Westminster 005,Westminster,-0.20073,51.52764,12142,55466,34282,Paddington,Maida Vale,0.86874,True
+E02000356,Hackney 012,Hackney,-0.08541,51.55590,7034,86370,45600,Hackney,Stoke Newington,0.60183,True
+E02000686,Lewisham 034,Lewisham,-0.02645,51.42683,7536,64243,32090,Lewisham,Lower Sydenham,1.43188,True
+E02000395,Hammersmith and Fulham 024,Hammersmith and Fulham,-0.20838,51.47077,5680,112966,58890,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,0.22129,True
+E02000346,Hackney 002,Hackney,-0.09147,51.57145,9398,68397,34999,Hackney,Stoke Newington,1.26792,True
+E02000662,Lewisham 010,Lewisham,-0.04195,51.46326,8295,72082,39479,Greenwich,Deptford,1.94600,True
+E02000930,Wandsworth 008,Wandsworth,-0.16581,51.46522,10081,85867,63530,Wandsworth,Battersea,0.67339,True
+E02000944,Wandsworth 022,Wandsworth,-0.21582,51.44785,7638,71750,37719,Wandsworth,Putney,1.43927,True
+E02000366,Hackney 022,Hackney,-0.04456,51.54063,8328,62470,36540,Hackney,Homerton,0.67929,True
+E02000968,Westminster 009,Westminster,-0.17024,51.52388,14478,48971,27533,Marylebone,St John's Wood,0.93125,True
+E02000571,Islington 018,Islington,-0.09403,51.53788,8922,70977,44692,Islington,Islington,0.61495,True
+E02000558,Islington 005,Islington,-0.11188,51.56244,9434,56779,30021,Islington,Highbury,1.13877,True
+E02000980,Westminster 021,Westminster,-0.13180,51.49237,8724,70893,38410,Belgrave,Pimlico,0.67777,True
+E02000668,Lewisham 016,Lewisham,0.01060,51.44982,6861,94429,45410,Lewisham,Lee,0.17252,True
+E02000655,Lewisham 003,Lewisham,-0.04736,51.47901,10281,67464,37136,Greenwich,Deptford,1.49325,True
+E02000337,Greenwich 025,Greenwich,0.04203,51.45918,8471,67931,37064,Lewisham,Eltham,1.41332,True
+E02000178,Camden 013,Camden,-0.19999,51.54669,8903,65300,36845,Hampstead,Hampstead,1.85389,True
+E02000575,Islington 022,Islington,-0.10385,51.52604,11313,76823,41885,Clerkenwell,Clerkenwell,0.13577,True
+E02000622,Lambeth 005,Lambeth,-0.11195,51.47956,8406,75642,42272,Lambeth,Kennington,0.26650,True
+E02000170,Camden 005,Camden,-0.19983,51.55349,7916,82587,46433,Hampstead,Hampstead,1.51641,True
+E02006786,Greenwich 033,Greenwich,0.10129,51.48073,7557,68844,37216,Lewisham,Eltham,4.52670,False
+E02000378,Hammersmith and Fulham 007,Hammersmith and Fulham,-0.22038,51.50182,6433,72755,43821,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,1.39552,True
+E02000341,Greenwich 029,Greenwich,0.03552,51.44656,7995,63115,34476,Lewisham,Eltham,1.58044,True
+E02000565,Islington 012,Islington,-0.08386,51.55022,8542,69000,39846,Hackney,Stoke Newington,1.21918,True
+E02000667,Lewisham 015,Lewisham,-0.03533,51.45324,6687,87228,56502,Lewisham,Lewisham,1.56314,True
+E02000829,Southwark 023,Southwark,-0.05747,51.47376,10925,60240,39841,Camberwell,Peckham,0.77710,True
+E02000867,Tower Hamlets 004,Tower Hamlets,-0.02373,51.53081,11328,70890,38988,Poplar,Bow,0.64753,True
+E02000934,Wandsworth 012,Wandsworth,-0.17912,51.46051,8916,77353,59862,Wandsworth,Wandsworth,1.03381,True
+E02000923,Wandsworth 001,Wandsworth,-0.16462,51.47719,7526,83030,56217,Wandsworth,Battersea,0.91474,True
+E02000641,Lambeth 024,Lambeth,-0.11392,51.44550,8630,66230,35778,Lambeth,Brixton,1.73898,True
+E02000344,Greenwich 032,Greenwich,0.06699,51.43255,6430,84182,48605,Lewisham,Eltham,2.13452,True
+E02000657,Lewisham 005,Lewisham,-0.03163,51.47181,9906,65561,40240,Greenwich,Deptford,0.75703,True
+E02007112,Tower Hamlets 034,Tower Hamlets,0.00223,51.51020,5893,101993,41240,Poplar,Poplar,1.37673,True
+E02000627,Lambeth 010,Lambeth,-0.12219,51.46866,9553,74148,42854,Lambeth,Stockwell,0.70598,True
+E02000975,Westminster 016,Westminster,-0.18002,51.51422,7417,77036,44084,Paddington,Bayswater,0.31287,True
+E02000635,Lambeth 018,Lambeth,-0.10712,51.45781,9812,77812,46675,Lambeth,Brixton,0.45547,True
+E02000870,Tower Hamlets 007,Tower Hamlets,-0.04874,51.52789,6371,62932,33194,Bethnal Green,Bethnal Green,0.50299,True
+E02000560,Islington 007,Islington,-0.11769,51.55970,7354,69881,40091,Islington,Lower Holloway,1.21735,True
+E02000188,Camden 023,Camden,-0.14116,51.52872,7180,66058,31178,St Pancras,Somers Town,0.43280,True
+E02000362,Hackney 018,Hackney,-0.03317,51.54618,6961,60061,39206,Hackney,Homerton,0.35561,True
+E02000564,Islington 011,Islington,-0.11353,51.55230,12420,77242,47359,Islington,Lower Holloway,0.66855,True
+E02000966,Westminster 007,Westminster,-0.18361,51.52571,9252,84107,48582,Paddington,Maida Vale,0.47914,True
+E02000355,Hackney 011,Hackney,-0.05038,51.55621,8194,73666,40828,Hackney,Lower Clapton,0.32537,True
+E02000981,Westminster 022,Westminster,-0.14140,51.48991,8271,81743,48893,Belgrave,Pimlico,0.14856,True
+E02000879,Tower Hamlets 016,Tower Hamlets,-0.04875,51.51689,8343,57438,29443,Stepney,Stepney,0.47750,True
+E02000864,Tower Hamlets 001,Tower Hamlets,-0.02881,51.53554,11263,68880,37980,Poplar,Bow,0.45023,True
+E02000636,Lambeth 019,Lambeth,-0.13951,51.45487,7714,97178,66877,Wandsworth,Clapham,0.98216,True
+E02000681,Lewisham 029,Lewisham,-0.02927,51.43424,8473,63613,35620,Lewisham,Lower Sydenham,1.39734,True
+E02000683,Lewisham 031,Lewisham,0.03146,51.43007,6768,59540,36107,Lewisham,Lee,2.80496,True
+E02000381,Hammersmith and Fulham 010,Hammersmith and Fulham,-0.21721,51.49814,7628,81262,44201,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,1.32969,True
+E02000595,Kensington and Chelsea 019,Kensington and Chelsea,-0.17379,51.48596,6164,96287,63454,Chelsea,Chelsea,0.45846,True
+E02000876,Tower Hamlets 013,Tower Hamlets,-0.05879,51.52233,7274,63503,29073,Bethnal Green,Bethnal Green,0.60428,True
+E02000621,Lambeth 004,Lambeth,-0.12355,51.48140,12520,74124,46677,Lambeth,Vauxhall,0.82504,True
+E02000582,Kensington and Chelsea 006,Kensington and Chelsea,-0.19826,51.51137,6543,89204,51617,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,0.54027,True
+E02000320,Greenwich 008,Greenwich,0.11272,51.48697,7041,68991,38141,Lewisham,Eltham,5.57572,False
+E02007084,Wandsworth 039,Wandsworth,-0.14641,51.47471,9890,61232,47654,Wandsworth,Clapham,1.53758,True
+E02000817,Southwark 011,Southwark,-0.05600,51.49087,6823,54492,34290,Rotherhithe,Rotherhithe,1.05657,True
+E02000950,Wandsworth 028,Wandsworth,-0.21647,51.44182,7585,91610,43927,Wandsworth,Putney,2.10753,True
+E02000333,Greenwich 021,Greenwich,0.01994,51.47167,6242,97035,51117,Greenwich,Greenwich,2.27515,True
+E02000317,Greenwich 005,Greenwich,0.05237,51.48876,7561,63447,32766,Lewisham,Eltham,4.24204,False
+E02000572,Islington 019,Islington,-0.11723,51.53676,8603,58856,36952,St Pancras,St Pancras,0.72273,True
+E02000682,Lewisham 030,Lewisham,-0.00733,51.43074,8932,67293,38084,Lewisham,Lee,2.52763,True
+E02000972,Westminster 013,Westminster,-0.13984,51.51857,7879,68395,43642,Marylebone,Marylebone,0.68355,True
+E02000591,Kensington and Chelsea 015,Kensington and Chelsea,-0.19843,51.49261,6212,65514,39748,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,0.92915,True
+E02000584,Kensington and Chelsea 008,Kensington and Chelsea,-0.19567,51.50549,7175,103548,59669,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,0.55438,True
+E02006918,Hackney 028,Hackney,-0.05204,51.56412,8398,75564,31915,Hackney,Upper Clapton,0.71806,True
+E02000877,Tower Hamlets 014,Tower Hamlets,-0.02885,51.51970,13809,69078,32948,Stepney,Mile End,0.34770,True
+E02000946,Wandsworth 024,Wandsworth,-0.18378,51.44356,8435,86040,53858,Wandsworth,Upper Tooting,1.46197,True
+E02000965,Westminster 006,Westminster,-0.19202,51.52651,7876,82564,46788,Paddington,Maida Vale,0.36281,True
+E02000674,Lewisham 022,Lewisham,-0.00259,51.44138,8454,74400,47955,Lewisham,Lee,1.34360,True
+E02000340,Greenwich 028,Greenwich,0.06273,51.44788,6865,73905,41657,Lewisham,Eltham,0.49717,True
+E02006784,Lewisham 038,Lewisham,-0.00227,51.42331,7968,62037,34502,Lewisham,Lower Sydenham,3.15282,True
+E02000973,Westminster 014,Westminster,-0.19458,51.51688,9955,72067,44125,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,0.89635,True
+E02000865,Tower Hamlets 002,Tower Hamlets,-0.05461,51.53204,7961,65643,34427,Bethnal Green,Bethnal Green,0.51669,True
+E02000812,Southwark 006,Southwark,-0.08608,51.49751,10788,66102,41100,Bermondsey,Bermondsey,0.72330,True
+E02000367,Hackney 023,Hackney,-0.05462,51.53873,10418,75411,44858,Hackney,Hackney,0.67180,True
+E02006854,Tower Hamlets 033,Tower Hamlets,-0.02463,51.50160,7076,97078,48749,Poplar,Poplar,1.15216,True
+E02000394,Hammersmith and Fulham 023,Hammersmith and Fulham,-0.18545,51.47242,9281,74262,49882,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,1.79415,True
+E02000830,Southwark 024,Southwark,-0.08343,51.47012,8884,75874,46178,Camberwell,Camberwell,0.99558,True
+E02000566,Islington 013,Islington,-0.10565,51.54941,8556,90508,50965,Islington,Highbury,0.80865,True
+E02000868,Tower Hamlets 005,Tower Hamlets,-0.06264,51.53028,7196,69745,37267,Bethnal Green,Bethnal Green,0.55908,True
+E02000594,Kensington and Chelsea 018,Kensington and Chelsea,-0.16275,51.48678,6482,74743,60065,Chelsea,Chelsea,0.37403,True
+E02000580,Kensington and Chelsea 004,Kensington and Chelsea,-0.20467,51.51716,7894,58955,37486,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,0.49117,True
+E02000168,Camden 003,Camden,-0.14143,51.55552,7813,88595,48272,St Pancras,Kentish Town,0.52857,True
+E02000642,Lambeth 025,Lambeth,-0.10263,51.44339,9809,79620,45423,Lambeth,West Norwood,1.74052,True
+E02006994,Greenwich 042,Greenwich,0.05737,51.49224,7641,64344,32610,Lewisham,Eltham,4.61599,False
+E02000878,Tower Hamlets 015,Tower Hamlets,-0.07079,51.51876,10433,66032,34432,Whitechapel,Spitalfields,0.13427,True
+E02000872,Tower Hamlets 009,Tower Hamlets,-0.06885,51.52523,8145,69280,36362,Whitechapel,Spitalfields,0.64180,True
+E02000358,Hackney 014,Hackney,-0.07574,51.55424,11090,66626,39378,Hackney,Stoke Newington,0.94328,True
+E02000951,Wandsworth 029,Wandsworth,-0.15820,51.43787,6431,79145,57507,Wandsworth,Upper Tooting,0.42826,True
+E02000835,Southwark 029,Southwark,-0.05126,51.45763,7680,80981,46982,Camberwell,Peckham,2.28327,True
+E02000392,Hammersmith and Fulham 021,Hammersmith and Fulham,-0.20321,51.47651,9229,88859,54841,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,0.77915,True
+E02000808,Southwark 002,Southwark,-0.09658,51.50260,10168,76670,49231,"Borough (St Saviour, St Olave, St George)",Southwark,0.02392,True
+E02000179,Camden 014,Camden,-0.16484,51.54441,5748,87515,41600,St Pancras,Gospel Oak,1.29108,True
+E02000586,Kensington and Chelsea 010,Kensington and Chelsea,-0.18482,51.49895,6474,90095,53070,"Kensington (with Hammersmith, Brompton and Fulham)",Kensington,0.68774,True
+E02000172,Camden 007,Camden,-0.14913,51.54989,9997,64690,34144,St Pancras,Gospel Oak,0.58939,True
+E02000379,Hammersmith and Fulham 008,Hammersmith and Fulham,-0.24828,51.50169,7388,80353,46218,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,1.38341,True
+E02000570,Islington 017,Islington,-0.10940,51.54138,8283,86920,51192,Islington,Islington,0.62170,True
+E02000177,Camden 012,Camden,-0.15295,51.54628,8488,68767,38298,St Pancras,Gospel Oak,0.86814,True
+E02000360,Hackney 016,Hackney,-0.06352,51.55089,11512,60081,30781,Hackney,Hackney,0.88697,True
+E02000169,Camden 004,Camden,-0.18710,51.55615,7177,108654,53786,Hampstead,Hampstead,0.59443,True
+E02000171,Camden 006,Camden,-0.15927,51.55295,7393,82603,49032,St Pancras,Gospel Oak,0.35665,True
+E02000372,Hammersmith and Fulham 001,Hammersmith and Fulham,-0.23767,51.51697,9984,62325,44083,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,2.26728,True
+E02000893,Tower Hamlets 030,Tower Hamlets,-0.00682,51.49187,7412,73044,34589,Poplar,Poplar,2.25133,True
+E02000384,Hammersmith and Fulham 013,Hammersmith and Fulham,-0.22758,51.49196,8267,71533,41517,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,0.47930,True
+E02000556,Islington 003,Islington,-0.11732,51.56583,11396,73756,42525,Islington,Upper Holloway,1.01641,True
+E02000961,Westminster 002,Westminster,-0.18513,51.53351,9814,78016,38997,Paddington,Maida Vale,0.56567,True
+E02000370,Hackney 026,Hackney,-0.09105,51.53177,8862,71501,37439,Shoreditch,Hoxton,0.34776,True
+E02000831,Southwark 025,Southwark,-0.07142,51.46762,9353,76254,48637,Camberwell,Peckham,0.86073,True
+E02000624,Lambeth 007,Lambeth,-0.11259,51.47553,9631,70095,39858,Lambeth,Kennington,0.57636,True
+E02000373,Hammersmith and Fulham 002,Hammersmith and Fulham,-0.23320,51.51270,7034,58980,34740,"Kensington (with Hammersmith, Brompton and Fulham)",Notting Hill,1.90892,True
+E02000925,Wandsworth 003,Wandsworth,-0.16338,51.47336,7900,71604,42211,Wandsworth,Battersea,0.66315,True
+E02006927,Greenwich 034,Greenwich,0.02614,51.45795,12367,86827,46089,Lewisham,Lee,1.41580,True
+E02000561,Islington 008,Islington,-0.13040,51.55794,7387,86930,50579,St Pancras,Kentish Town,1.02631,True
+E02000576,Islington 023,Islington,-0.09406,51.52590,10673,63642,38459,St Luke,St Luke's,0.16188,True
+E02000574,Islington 021,Islington,-0.11342,51.53103,7833,72112,41716,Clerkenwell,Clerkenwell,0.80279,True
+E02000836,Southwark 030,Southwark,-0.07642,51.45511,8296,90667,57489,Camberwell,Dulwich,2.21075,True
+E02000385,Hammersmith and Fulham 014,Hammersmith and Fulham,-0.21077,51.48878,5614,68777,52211,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,1.69742,True
+E02000182,Camden 017,Camden,-0.17537,51.54215,7120,79140,45559,Marylebone,St John's Wood,1.16074,True
+E02000343,Greenwich 031,Greenwich,0.05408,51.43270,7046,68942,38907,Lewisham,Eltham,2.02053,True
+E02000315,Greenwich 003,Greenwich,0.11314,51.49375,9871,61567,34102,Lewisham,Eltham,6.16115,False
+E02000677,Lewisham 025,Lewisham,-0.01330,51.43831,7211,72189,43783,Lewisham,Lewisham,2.09073,True
+E02000869,Tower Hamlets 006,Tower Hamlets,-0.07223,51.52853,5931,60816,36514,Shoreditch,Haggerston,0.60959,True
+E02000665,Lewisham 013,Lewisham,0.00221,51.45599,8155,76893,41349,Lewisham,Lee,0.72797,True
+E02000977,Westminster 018,Westminster,-0.12798,51.51078,6388,81840,50982,"West End (St James, Mayfair, Strand, St Martin)",Strand,0.31828,True
+E02000833,Southwark 027,Southwark,-0.08572,51.46311,7487,83526,44886,Camberwell,Camberwell,1.56992,True
+E02000388,Hammersmith and Fulham 017,Hammersmith and Fulham,-0.19927,51.48311,8657,74527,50069,"Kensington (with Hammersmith, Brompton and Fulham)",Fulham,1.52433,True
+E02000940,Wandsworth 018,Wandsworth,-0.19350,51.45358,9324,82381,44621,Wandsworth,Wandsworth,0.35826,True
+E02000167,Camden 002,Camden,-0.17347,51.55733,7198,99126,62834,Hampstead,Hampstead,0.36118,True
+E02000318,Greenwich 006,Greenwich,0.09401,51.48731,11064,58939,32368,Lewisham,Eltham,4.80224,False
+E02000814,Southwark 008,Southwark,-0.03756,51.49683,10291,90287,44580,Rotherhithe,Rotherhithe,0.60089,True
+E02007008,Lewisham 040,Lewisham,-0.01553,51.46564,5766,72089,43082,Lewisham,Lewisham,0.95874,True
+E02000176,Camden 011,Camden,-0.16826,51.54769,5914,85587,52427,St Pancras,Gospel Oak,1.19022,True
+E02000354,Hackney 010,Hackney,-0.06053,51.55756,9610,64996,34071,Hackney,Lower Clapton,0.87863,True
+E02000931,Wandsworth 009,Wandsworth,-0.15844,51.46195,8815,101815,72509,Wandsworth,Battersea,1.28217,True
+E02000942,Wandsworth 020,Wandsworth,-0.20498,51.45011,9686,100088,61601,Wandsworth,Wandsworth,1.12791,True
+E02000331,Greenwich 019,Greenwich,0.04100,51.47466,8238,70574,37260,Lewisham,Eltham,2.88927,True
+E02007110,Hackney 032,Hackney,-0.08538,51.52942,7332,71981,45048,Shoreditch,Hoxton,0.19872,True
+E02007115,Camden 029,Camden,-0.12197,51.52722,11588,61232,33361,St Giles,Bloomsbury,0.78643,True
+E02007114,Tower Hamlets 036,Tower Hamlets,-0.01367,51.49723,7565,81894,37979,Poplar,Poplar,1.55254,True
+E02000623,Lambeth 006,Lambeth,-0.12514,51.47670,7859,62781,37032,Lambeth,Kennington,1.23239,True
+E02000866,Tower Hamlets 003,Tower Hamlets,-0.03617,51.53126,10646,70324,42673,Poplar,Bow,0.26587,True
+E02000673,Lewisham 021,Lewisham,-0.05507,51.44456,8139,90177,47192,Lewisham,Lower Sydenham,1.90307,True
+E02006928,Greenwich 035,Greenwich,-0.01745,51.48112,12093,84152,48231,Greenwich,Greenwich,0.53389,True
+E02000588,Kensington and Chelsea 012,Kensington and Chelsea,-0.16206,51.49587,5983,98561,61450,"Kensington (with Hammersmith, Brompton and Fulham)",Brompton,0.70767,True
+E02000351,Hackney 007,Hackney,-0.09720,51.56430,9286,73981,41497,Islington,Highbury,0.97870,True
+E02000319,Greenwich 007,Greenwich,0.08403,51.48765,10618,65141,35129,Lewisham,Eltham,4.50648,False
+E02000971,Westminster 012,Westminster,-0.16244,51.51845,7473,84824,48528,Marylebone,Marylebone,0.88798,True
+E02006802,Southwark 034,Southwark,-0.10447,51.49880,9276,69009,42517,"Borough (St Saviour, St Olave, St George)",Southwark,0.68891,True
+E02000834,Southwark 028,Southwark,-0.07042,51.45884,9388,85791,56490,Camberwell,Peckham,1.81739,True
+E02000816,Southwark 010,Southwark,-0.06460,51.49078,9610,65875,40264,Bermondsey,Bermondsey,0.94871,True
+E02000380,Hammersmith and Fulham 009,Hammersmith and Fulham,-0.23049,51.49867,5508,83396,54420,"Kensington (with Hammersmith, Brompton and Fulham)",Hammersmith,0.70633,True
+E02000191,Camden 026,Camden,-0.13402,51.52223,5337,77584,37184,St Giles,Bloomsbury,0.51252,True
+E02000669,Lewisham 017,Lewisham,-0.00425,51.44937,7972,73563,42950,Lewisham,Lee,0.94186,True
+E02000927,Wandsworth 005,Wandsworth,-0.15384,51.46772,7100,73643,51373,Wandsworth,Battersea,1.25064,True
+E02000554,Islington 001,Islington,-0.12221,51.57071,9356,64327,36050,Islington,Upper Holloway,0.73024,True
+E02000628,Lambeth 011,Lambeth,-0.11316,51.46752,10785,60747,36992,Lambeth,Brixton,0.73469,True
+E02000659,Lewisham 007,Lewisham,-0.00803,51.46733,8063,77104,42320,Lewisham,Lewisham,1.20402,True
+E02000956,Wandsworth 034,Wandsworth,-0.17492,51.42862,7420,67185,46286,Wandsworth,Upper Tooting,1.43660,True
+E02000181,Camden 016,Camden,-0.18734,51.54384,8076,92018,54773,Hampstead,Hampstead,1.55138,True
+E02000885,Tower Hamlets 022,Tower Hamlets,-0.05330,51.51239,7054,55447,26512,St George in the East,Shadwell,0.47667,True
+E02000820,Southwark 014,Southwark,-0.10241,51.48849,9245,68622,37369,Newington,Newington,0.20830,True
+E02000819,Southwark 013,Southwark,-0.07273,51.48916,8499,61112,35418,Bermondsey,Bermondsey,0.69997,True
+E02000672,Lewisham 020,Lewisham,-0.02400,51.44625,10272,68871,36184,Lewisham,Lewisham,1.40274,True
+E02000345,Hackney 001,Hackney,-0.07016,51.57416,8199,82522,32387,Hackney,Upper Clapton,1.07606,True
+E02006992,Greenwich 040,Greenwich,0.00453,51.48888,8229,78378,48599,Greenwich,Greenwich,1.55571,True
+E02000883,Tower Hamlets 020,Tower Hamlets,-0.01461,51.51348,9287,57094,26517,Poplar,Poplar,0.34647,True
+E02000949,Wandsworth 027,Wandsworth,-0.16237,51.44106,10003,97695,64945,Wandsworth,Upper Tooting,0.19926,True
+E02000632,Lambeth 015,Lambeth,-0.12556,51.46137,9586,83263,60921,Lambeth,Stockwell,0.40896,True
+E02000888,Tower Hamlets 025,Tower Hamlets,-0.04769,51.51098,8620,78816,33051,St George in the East,Shadwell,0.35068,True
+E02000952,Wandsworth 030,Wandsworth,-0.15212,51.43634,6145,86538,54094,Wandsworth,Upper Tooting,0.88374,True
+E02000978,Westminster 019,Westminster,-0.16321,51.49995,7129,111408,71486,Belgrave,Belgravia,0.89958,True
+E02000364,Hackney 020,Hackney,-0.06643,51.54493,9217,69277,42614,Hackney,Hackney,0.76813,True

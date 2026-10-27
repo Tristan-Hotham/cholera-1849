@@ -1,0 +1,80 @@
+unit,bank,seed,os_local_type,lat,lon
+City of London,N,City of London,City,51.51437,-0.09229
+"Borough (St Saviour, St Olave, St George)",S,Southwark,Other Settlement,51.50275,-0.09682
+Westminster,N,City of Westminster,City,51.50099,-0.12614
+"West End (St James, Mayfair, Strand, St Martin)",N,Strand,Suburban Area,51.51285,-0.12482
+"West End (St James, Mayfair, Strand, St Martin)",N,Soho,Suburban Area,51.51298,-0.13371
+"West End (St James, Mayfair, Strand, St Martin)",N,St James's,Suburban Area,51.50789,-0.13834
+"West End (St James, Mayfair, Strand, St Martin)",N,Mayfair,Suburban Area,51.50964,-0.14661
+Belgrave,N,Belgravia,Suburban Area,51.49672,-0.15133
+Belgrave,N,Pimlico,Suburban Area,51.48896,-0.13989
+St Giles,N,St Giles,Suburban Area,51.51482,-0.12501
+St Giles,N,Bloomsbury,Suburban Area,51.52087,-0.12696
+Holborn,N,Holborn,Suburban Area,51.51702,-0.11284
+Clerkenwell,N,Clerkenwell,Suburban Area,51.52565,-0.10571
+St Luke,N,St Luke's,Suburban Area,51.52568,-0.09637
+Marylebone,N,Marylebone,Suburban Area,51.51892,-0.14967
+Marylebone,N,St John's Wood,Suburban Area,51.53172,-0.17495
+Paddington,N,Paddington,Other Settlement,51.51596,-0.17498
+Paddington,N,Bayswater,Suburban Area,51.51229,-0.1833
+Paddington,N,Maida Vale,Suburban Area,51.52884,-0.18836
+Hampstead,N,Hampstead,Other Settlement,51.55667,-0.17857
+St Pancras,N,St Pancras,Suburban Area,51.5341,-0.12674
+St Pancras,N,Camden Town,Other Settlement,51.53902,-0.14269
+St Pancras,N,Kentish Town,Suburban Area,51.55087,-0.1399
+St Pancras,N,Somers Town,Suburban Area,51.52776,-0.13511
+St Pancras,N,Gospel Oak,Suburban Area,51.55403,-0.15443
+Islington,N,Islington,Other Settlement,51.53755,-0.10288
+Islington,N,Highbury,Suburban Area,51.55563,-0.09961
+Islington,N,Lower Holloway,Suburban Area,51.54903,-0.12162
+Islington,N,Upper Holloway,Suburban Area,51.56779,-0.13164
+Hackney,N,Hackney,Other Settlement,51.54475,-0.05536
+Hackney,N,Homerton,Suburban Area,51.54519,-0.03805
+Hackney,N,Stoke Newington,Other Settlement,51.56118,-0.08355
+Hackney,N,Upper Clapton,Suburban Area,51.56594,-0.06198
+Hackney,N,Lower Clapton,Suburban Area,51.5533,-0.04986
+Shoreditch,N,Shoreditch,Suburban Area,51.52468,-0.08394
+Shoreditch,N,Hoxton,Suburban Area,51.53114,-0.08614
+Shoreditch,N,Haggerston,Suburban Area,51.53383,-0.06997
+Bethnal Green,N,Bethnal Green,Other Settlement,51.52747,-0.05596
+Whitechapel,N,Whitechapel,Suburban Area,51.51637,-0.0691
+Whitechapel,N,Spitalfields,Suburban Area,51.51977,-0.07185
+St George in the East,N,Wapping,Suburban Area,51.50748,-0.06666
+St George in the East,N,Shadwell,Suburban Area,51.50843,-0.05066
+Stepney,N,Stepney,Other Settlement,51.52114,-0.04973
+Stepney,N,Limehouse,Suburban Area,51.51422,-0.03411
+Stepney,N,Mile End,Suburban Area,51.52168,-0.03272
+Poplar,N,Poplar,Other Settlement,51.51097,-0.01756
+Poplar,N,Bow,Other Settlement,51.53232,-0.03274
+Poplar,N,Bromley,Suburban Area,51.52506,-0.01985
+"Kensington (with Hammersmith, Brompton and Fulham)",N,Kensington,Other Settlement,51.50057,-0.19438
+"Kensington (with Hammersmith, Brompton and Fulham)",N,Brompton,Suburban Area,51.49374,-0.17167
+"Kensington (with Hammersmith, Brompton and Fulham)",N,Hammersmith,Other Settlement,51.4928,-0.23435
+"Kensington (with Hammersmith, Brompton and Fulham)",N,Fulham,Other Settlement,51.47163,-0.21125
+"Kensington (with Hammersmith, Brompton and Fulham)",N,Notting Hill,Suburban Area,51.51279,-0.2057
+Chelsea,N,Chelsea,Other Settlement,51.4878,-0.16788
+Greenwich,S,Greenwich,Other Settlement,51.47869,-0.01082
+Greenwich,S,Deptford,Other Settlement,51.47763,-0.02598
+Lewisham,S,Lewisham,Other Settlement,51.4571,-0.01371
+Lewisham,S,Lee,Suburban Area,51.45103,0.00904
+Lewisham,S,Eltham,Other Settlement,51.45075,0.05725
+Lewisham,S,Lower Sydenham,Suburban Area,51.42823,-0.04692
+Wandsworth,S,Wandsworth,Other Settlement,51.45677,-0.19274
+Wandsworth,S,Battersea,Other Settlement,51.47015,-0.17142
+Wandsworth,S,Putney,Other Settlement,51.46076,-0.21711
+Wandsworth,S,Clapham,Other Settlement,51.4631,-0.13439
+Wandsworth,S,Upper Tooting,Suburban Area,51.4395,-0.16378
+Wandsworth,S,Streatham,Other Settlement,51.43206,-0.1293
+Lambeth,S,Lambeth,Suburban Area,51.49672,-0.11708
+Lambeth,S,Kennington,Suburban Area,51.47991,-0.10816
+Lambeth,S,Vauxhall,Suburban Area,51.48861,-0.12074
+Lambeth,S,Brixton,Suburban Area,51.46104,-0.11115
+Lambeth,S,Stockwell,Suburban Area,51.46417,-0.12938
+Lambeth,S,West Norwood,Suburban Area,51.42794,-0.09864
+Camberwell,S,Camberwell,Other Settlement,51.47628,-0.09383
+Camberwell,S,Peckham,Suburban Area,51.47513,-0.06844
+Camberwell,S,Dulwich,Suburban Area,51.43538,-0.08017
+Newington,S,Newington,Suburban Area,51.48822,-0.09944
+Newington,S,Walworth,Suburban Area,51.48929,-0.08664
+Bermondsey,S,Bermondsey,Other Settlement,51.495,-0.07647
+Rotherhithe,S,Rotherhithe,Suburban Area,51.49803,-0.046
